@@ -23,19 +23,31 @@ body {
 .header {
   display: flex;
   align-items: center;
+  justify-content: space-between;
   height: 80px;
 }
 .header__item {
   list-style: none;
   display: inline-block;
   text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: -0.01rem;
+  font-weight: 600;
+}
+.header__item:hover {
+  cursor: pointer;
 }
 .header__link {
   text-decoration: none;
+  color: #45413e;
   width: 372px;
   height: 10px;
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 600;
+  font-size: 1rem;
+}
+.header__link:visited {
+  color: #45413e;
 }
 
 .logo {
@@ -48,27 +60,105 @@ body {
   padding-left: 10px;
 }
 .logo__name_main {
-  height: 30px;
+  height: 33px;
   color: #011847;
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 900;
   text-transform: uppercase;
-  letter-spacing: 6.33px;
+  letter-spacing: 5px;
 }
 .logo__name_secondary {
-  height: 17px;
-  color: #84bc22;
+  height: 25px;
+  color: #85bc23;
   font-size: 18px;
   font-weight: 400;
 }
 
 .menu {
   display: flex;
+  align-items: center;
+  height: 80px;
+}
+.menu__navigation {
+  height: 80px;
+}
+.menu .navigation {
+  height: 80px;
+  padding: 0;
+  margin: 0;
+}
+.menu .navigation__item {
+  margin-top: 15px;
+  padding: 10px 10px 28px 10px;
+}
+.menu .navigation__item:hover {
+  background-color: #262a32;
+  border-bottom: 3px solid #85bc23;
+  color: #999999;
+}
+.menu .navigation__item:hover .header__link {
+  color: #999999;
+}
+.menu .navigation .dropdown-menu {
+  border: none;
+  padding: 0;
+  margin: 0;
+  right: 0;
+  left: -500px;
+}
+.menu .navigation .dropdown-header {
+  color: white;
+  font-weight: 600;
+  padding-bottom: 25px;
+}
+.menu .navigation .dropdown-item {
+  color: white;
+  padding-top: 4px;
+  padding-bottom: 3px;
+}
+.menu .navigation .dropdown-item:hover {
+  background-color: inherit;
+}
+.menu .navigation .dropdown-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.menu .navigation .dropdown-img {
+  border: none;
+  border-radius: 5px;
+}
+.menu .services {
+  display: grid;
+  grid-template-columns: 56% 19% 25%;
+  background-color: #262a33;
+  color: white;
+  padding: 45px;
+}
+.menu .categories {
+  display: grid;
+  grid-template-columns: 33% 33% 33%;
+}
+.menu .settings {
+  margin-bottom: 5px;
+}
+.menu .settings__item {
+  padding: 0 15px 0 15px;
+  color: #999999;
+}
+.menu .operations {
+  margin-bottom: 0;
+}
+.menu .operations__item {
+  padding: 0 15px 0 15px;
 }
 
-.operations__img {
-  width: 24px;
-  height: 24px;
+.navigation .dropdown-toggle::after {
+  margin-left: 25px;
+}
+
+.settings .dropdown-toggle::after {
+  margin-left: 15px;
 }
 
 /*# sourceMappingURL=index.css.map */
