@@ -1,0 +1,56 @@
+.header {
+    display: flex;
+    align-items: center;
+    height: 80px;
+
+
+    &__item {
+        list-style: none;
+        display: inline-block;   
+        text-transform: uppercase;      
+    }
+
+    &__link {
+        text-decoration: none;
+        width: 372px;
+        height: 10px;
+        font-size: 14px;
+        font-weight: 400;
+    }
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+
+    &__name {
+        display: flex;
+        flex-direction: column;
+        padding-left: 10px;    
+        
+        &_main {
+            height: 30px;
+            color: #011847;
+            font-size: 32px;
+            font-weight: 900;
+            text-transform: uppercase;
+            letter-spacing: 6.33px;
+        }
+
+        &_secondary {
+            height: 17px;
+            color: #84bc22;
+            font-size: 18px;
+            font-weight: 400;            
+        }
+    }
+}
+
+.menu {
+    display: flex;
+}
+
+.operations__img {
+    width: 24px;
+height: 24px;
+}
