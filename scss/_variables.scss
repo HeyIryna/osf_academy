@@ -2,5 +2,37 @@ $primary: #85bc23;
 $secondary: #3b5b96;
 $background-main: #262a32;
 
-$text-main:  #45413e;
+$text-main: #45413e;
 $text-secondary: #999999;
+
+$icon-color: #b2b2b2;
+
+@mixin link {
+  text-decoration: none;
+  color: $text-main;
+
+  &:visited {
+    color: inherit;
+  }
+
+  &:hover {
+    color: inherit;
+    cursor: pointer;
+  }
+}
+
+@mixin menu_heading($color, $font-size) {
+  color: $color;
+  opacity: 0.95;
+  letter-spacing: 0.01rem;
+  font-weight: 600;
+
+  text-transform: uppercase;
+  font-size: $font-size;
+}
+
+@mixin icon($font-size) {
+  padding: 0 15px 10px 15px;
+  color: $icon-color;
+  font-size: $font-size;
+}

@@ -1,0 +1,55 @@
+@import 'variables';
+
+.footer {
+  display: grid;
+  grid-template-columns: 27% 4fr 1fr;
+  font-size: 0.8125rem;
+  color: $text-main;
+  margin-top: 40px;
+  margin-bottom: 40px;
+
+  &__copyright {
+    padding-bottom: 25px;
+  }
+
+  &__menu {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+  }
+
+  &__header {
+    @include menu_heading($text-main, 0.8125rem);
+  }
+
+  &__categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  &__icon {
+    @include link;
+    @include icon(1rem);
+    &:hover {
+      color: $icon-color;
+    }
+  }
+
+  &__social {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+}
+
+.categories {
+  &__column {
+    display: flex;
+    flex-direction: column;
+    opacity: 0.7;
+  }
+
+  &__item {
+    @include link;
+    padding: 8px 0;
+  }
+}

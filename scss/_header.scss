@@ -1,183 +1,172 @@
 @import 'variables';
 
 .header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    height: 80px;
-    //background-color: red;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 80px;
+  //background-color: red;
 
+  &__item {
+    list-style: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: -0.01rem;
+    font-weight: 600;
 
-    &__item {
-        list-style: none;
-        display: inline-block;   
-        text-transform: uppercase; 
-        font-size: 1rem; 
-        letter-spacing: -0.01rem; 
-        font-weight: 600;  
-
-        &:hover {
-            cursor: pointer;
-        }
+    &:hover {
+      cursor: pointer;
     }
+  }
 
-    &__link {
-        text-decoration: none;
-        color: $text-main;
-        width: 372px;
-        height: 10px;
-        font-size: 14px;
-        font-weight: 600;
-        font-size: 1rem; 
-        
-        &:visited {
-            color: $text-main
-        }
-
-        // &:hover {
-        //     color: #ffffff;
-        // }
-    }
+  &__link {
+    @include link;
+    width: 372px;
+    height: 10px;
+    font-weight: 600;
+    font-size: 1rem;
+  }
 }
 
 .logo {
+  display: flex;
+  align-items: center;
+
+  &__name {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    padding-left: 10px;
 
-    &__name {
-        display: flex;
-        flex-direction: column;
-        padding-left: 10px;    
-        
-        &_main {
-            height: 33px;
-            color: #011847;
-            font-size: 2rem;
-            font-weight: 900;
-            text-transform: uppercase;
-            letter-spacing: 5px;
-        }
-
-        &_secondary {
-            height: 25px;
-            color: $primary;
-            font-size: 18px;
-            font-weight: 400;            
-        }
+    &_main {
+      height: 33px;
+      color: #011847;
+      font-size: 2rem;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 5px;
     }
+
+    &_secondary {
+      height: 25px;
+      color: $primary;
+      font-size: 18px;
+      font-weight: 400;
+    }
+  }
 }
 
 .menu {
-    display: flex;
-    align-items: center;
-    height: 80px;
+  display: flex;
+  align-items: center;
+  height: 80px;
 
-    &__navigation {
-        height: 80px;
+  &__navigation {
+    height: 80px;
+  }
+
+  .navigation {
+    height: 80px;
+    padding: 0;
+    margin: 0;
+
+    &__item {
+      margin-top: 15px;
+      padding: 10px 10px 28px 10px;
+
+      &:hover {
+        background-color: $background-main;
+        border-bottom: 3px solid $primary;
+        color: $text-secondary;
+      }
+
+      &:hover .header__link {
+        color: $text-secondary;
+      }
     }
 
-    .navigation {
-        height: 80px;
+    .dropdown {
+      &-menu {
+        border: none;
         padding: 0;
         margin: 0;
 
-        
-        &__item {
-            margin-top: 15px;
-            padding: 10px 10px 28px 10px;
-
-            &:hover {
-                background-color: $background-main;
-                border-bottom: 3px solid $primary;
-                color: $text-secondary;
-                
-            }
-
-            &:hover .header__link{
-                color: $text-secondary;
-            }
+        &.open {
+          display: table;
+          width: 100%;
+          text-align: center;
+          left: 0;
+          right: 0;
         }
+      }
 
-        .dropdown {
-            &-menu {
-                border: none;
-                padding: 0;
-                margin: 0;
-                right: 0;
-                left: -500px;                
-            }
+      &-header {
+        @include menu_heading(white, 1rem);
+        padding-bottom: 25px;
+      }
 
-            &-header {
-                color:white;
-                font-weight: 600;
-                padding-bottom: 25px;
-            }
-            
-            &-item {
-                color:white;
-                padding-top: 4px;
-                padding-bottom: 3px;
-
-                &:hover {
-                    background-color: inherit;
-
-                }
-            }
-
-            &-container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            &-img {
-                border: none;
-                border-radius: 5px;
-            }
-        }
-
-    }
-
-    .services {
-        display: grid;
-        grid-template-columns: 56% 19% 25%;
-        background-color: #262a33;
+      &-item {
         color: white;
-        padding: 45px;
-    }
-    
-    .categories {
-        display: grid;
-        grid-template-columns: 33% 33% 33%;
-    }
+        opacity: 0.95;
+        letter-spacing: 0.01rem;
+        padding-top: 4px;
+        padding-bottom: 3px;
+        font-size: 0.875rem;
+        text-transform: capitalize;
 
-    .settings {
-        margin-bottom: 5px;
-        &__item {
-            padding: 0 15px 0 15px;
-            color: $text-secondary;
+        &:hover {
+          background-color: inherit;
         }
-    }
+      }
 
-    .operations {
-        margin-bottom: 0;
+      &-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
 
-        &__item {
-            padding: 0 15px 0 15px;
-            
-        }
+      &-img {
+        border: none;
+        border-radius: 5px;
+      }
     }
+  }
+
+  .services {
+    display: grid;
+    grid-template-columns: 3fr 1fr 25%;
+    background-color: #262a33;
+    color: white;
+    padding: 45px;
+  }
+
+  .categories {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .settings {
+    margin-bottom: 5px;
+
+    &__item {
+      padding: 0 15px 0 15px;
+      color: $text-secondary;
+    }
+  }
+
+  .operations {
+    margin-bottom: 0;
+
+    &__item {
+      @include icon(1.4rem);
+    }
+  }
 }
 
-
-
-
-
 .navigation .dropdown-toggle::after {
-    margin-left: 25px;
+  margin-left: 25px;
 }
 
 .settings .dropdown-toggle::after {
-    margin-left: 15px;
+  margin-left: 15px;
 }
-
