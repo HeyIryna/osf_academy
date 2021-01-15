@@ -1,11 +1,15 @@
 @import 'variables';
 
 .header {
+  position: fixed;  
   display: flex;
+  width: 1280px;
+  background-color: white;
+  z-index: 1;
   align-items: center;
   justify-content: space-between;
   height: 80px;
-  //background-color: red;
+  border-bottom: 1px solid #e8e2d6;
 
   &__item {
     list-style: none;

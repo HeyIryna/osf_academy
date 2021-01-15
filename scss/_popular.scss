@@ -1,0 +1,29 @@
+@import 'variables';
+
+.popular {
+    background-color: $background-main;
+    color:white;
+    padding-top: 55px;
+    padding-bottom: 55px;
+
+    &__headding {
+        font-size: 1.5rem;
+        font-weight: 600;
+        text-align: center;
+    }
+}
+
+.card {
+    width: 268px;
+    height: 366;
+    border-radius: $element-border-radius;
+    color: $text-main;
+    border: none;
+
+    &__img {
+        display: block;
+        width: 100%;
+        background-color: $background-main;
+        border-radius: $element-border-radius $element-border-radius 0 0;
+    }
+}
