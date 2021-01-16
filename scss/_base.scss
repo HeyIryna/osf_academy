@@ -26,6 +26,18 @@ body {
   }
 }
 
+@media (min-width: 320px) and (max-width: 1279px) {
+  .wrapper {
+    &_outer {
+      width: 100%;
+    }
+
+    &_inner {
+      padding: 0 5%;
+    }
+  }
+}
+
 .main {
   padding-top: 80px;
 }
@@ -106,5 +118,135 @@ body {
     width: 266px;
     opacity: 0.8;
     margin-top: 50px;
+  }
+}
+
+.card {
+  width: 268px;
+  height: 365px;
+  border-radius: $element-border-radius;
+  color: $text-main;
+  border: none;
+
+  font-size: 1rem;
+  position: relative;
+
+  &__content {
+    border-radius: $element-border-radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 268px;
+    height: 365px;
+    left: 0;
+    top: 0;
+  }
+
+  &__overlay {
+    background-image: linear-gradient(
+      to top,
+      rgba(28, 193, 103, 0.8),
+      rgba(46, 211, 162, 0.8)
+    );
+    border-radius: $element-border-radius;
+    width: 268px;
+    height: 365px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+  }
+
+  &__img {
+    display: block;
+    width: 100%;
+    background-color: $background-main;
+    border-radius: $element-border-radius $element-border-radius 0 0;
+  }
+
+  &__text {
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 15px 0 15px;
+    letter-spacing: -1px;
+    line-height: 1.2rem;
+  }
+
+  &__price {
+    font-size: 0.875;
+    margin-bottom: 15px;
+  }
+
+  &__message {
+    background-image: linear-gradient(
+        to top,
+        rgba(103, 91, 153, 0.8),
+        rgba(220, 89, 135, 0.8)
+      ),
+      url('../img/main/message.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: $element-border-radius;
+  }
+}
+
+.card:hover > .card__overlay {
+  display: block;
+}
+
+.overlay {
+  &__buttons-group {
+    width: 268px;
+    height: 365px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__button {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 2rem;
+
+    &_plus {
+      color: #23c46e;
+    }
+
+    &_heart {
+      color: #e73c68;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .card {
+    width: 290px;
+
+    &__content {
+      width: 100%;
+    }
+
+    &__img {
+      height: 260px;
+    }
+
+    &__overlay {
+      width: 100%;
+    }
   }
 }

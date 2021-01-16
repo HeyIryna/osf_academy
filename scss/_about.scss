@@ -26,7 +26,7 @@
   background-size: cover;
   background-position: center;
   border-radius: $element-border-radius;
-  width: 870px;
+  max-width: 870px;
   height: 505px;
   color: white;
   padding: 70px 65px 45px;
@@ -53,6 +53,7 @@
     font-size: 2.9rem;
     font-weight: 600;
     margin-bottom: 100px;
+    max-width: 560px;
   }
 
   &__text {
@@ -60,6 +61,9 @@
     font-size: 0.875rem;
     line-height: 1rem;
     margin-bottom: 50px;
+    width: 336px;
+    height: 31px;
+    overflow: hidden;
   }
 }
 
@@ -107,5 +111,68 @@
       line-height: 1rem;
       margin-bottom: 25px;
     }
+  }
+}
+
+@media (max-width: 1279px) {
+  .about {
+    &__aside {
+      width: 25%;
+    }
+  }
+
+  .sale {
+    width: 100%;
+    //background-position: right top;
+
+    &__percents {
+      font-size: 4rem;
+    }
+  }
+
+  .about__carousell {
+    width: 75%;
+  }
+
+  .slide {
+    padding: 10%;
+    background-position: right top;
+
+    &__heading {
+      font-size: 2.5rem;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .about {
+    &__aside {
+      display: none;
+    }
+  }
+
+  .about__carousell {
+    width: 100%;
+  }
+
+  .slide {
+    padding: 5%;
+
+    &__heading {
+      font-size: 2rem;
+      margin-bottom: 40px;
+    }
+
+    &__text {
+      width: 100%;
+      height: auto;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+    }
+  }
+
+  .btn__more {
+    align-self: center;
+    opacity: 0.8;
   }
 }

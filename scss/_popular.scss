@@ -13,144 +13,50 @@
     padding-bottom: 40px;
     padding-top: 40px;
     width: 1170px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
-
-  &__line {
-    width: 460px;
   }
 
   &__headding {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
+    line-height: 0;
+
+    & span {
+      display: inline-block;
+      position: relative;
+    }
   }
 
   &__list {
     width: 1170px;
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
     grid-gap: 30px;
   }
 }
 
-.card {
-  width: 268px;
-  height: 365px;
-  border-radius: $element-border-radius;
-  color: $text-main;
-  border: none;
-
-  font-size: 1rem;
-  position: relative;
-
-  &__content {
-    border-radius: $element-border-radius;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    position: absolute;
-    width: 268px;
-    height: 365px;
-    left: 0;
-    top: 0;
-  }
-
-  &__overlay {
-    background-image: linear-gradient(
-      to top,
-      rgba(28, 193, 103, 0.8),
-      rgba(46, 211, 162, 0.8)
-    );
-    border-radius: $element-border-radius;
-    width: 268px;
-    height: 365px;
-    position: absolute;
-    left: 0;
-    top: 0;
-    display: none;
-  }
-
-  &__img {
-    display: block;
-    width: 100%;
-    background-color: $background-main;
-    border-radius: $element-border-radius $element-border-radius 0 0;
-  }
-
-  &__text {
-    height: 105px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-
-  &__title {
-    text-align: center;
-    margin: 0 15px 0 15px;
-    letter-spacing: -1px;
-    line-height: 1.2rem;
-  }
-
-  &__price {
-    font-size: 0.875;
-    margin-bottom: 15px;
-  }
-
-  &__message {
-    background-image: linear-gradient(
-        to top,
-        rgba(103, 91, 153, 0.8),
-        rgba(220, 89, 135, 0.8)
-      ),
-      url('../img/main/message.jpg');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-    border-radius: $element-border-radius;
-  }
+.popular__headding span:before,
+.popular__headding span:after {
+  content: '';
+  position: absolute;
+  border-top: 1px solid white;
+  width: 500px;
+  opacity: 0.2;
 }
 
-.card:hover > .card__overlay {
-  display: block;
+.popular__headding span:before {
+  right: 100%;
+  margin-right: 15px;
 }
-
-.overlay {
-  &__buttons-group {
-    width: 268px;
-    height: 365px;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-  }
-
-  &__button {
-    width: 90px;
-    height: 90px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: white;
-    border-radius: 50%;
-    font-size: 2rem;
-
-    &_plus {
-      color: #23c46e;
-    }
-
-    &_heart {
-      color: #e73c68;
-    }
-  }
+.popular__headding span:after {
+  left: 100%;
+  margin-left: 15px;
 }
 
 .message {
   &__content {
-    width: 200px;
+    width: 268px;
     height: 365px;
     display: flex;
     flex-direction: column;
@@ -163,5 +69,47 @@
 
   &__text {
     padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 1279px) {
+  .popular {
+    padding-top: 0;
+    &__list {
+      width: 100%;
+    }
+  }
+
+  .message {
+    &__content {
+      width: 268px;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .popular {
+    &__list {
+      width: 290px;
+    }
+  }
+
+  .message {
+    &__content {
+      width: 100%;
+    }
+  }
+
+  .popular__headding span:before,
+  .popular__headding span:after {
+    content: '';
+    position: absolute;
+    border-top: 1px solid white;
+    width: 90px;
+    opacity: 0.2;
+  }
+
+  .btn__load {
+    display: none;
   }
 }
