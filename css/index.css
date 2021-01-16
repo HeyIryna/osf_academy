@@ -431,6 +431,17 @@ body {
   flex-direction: column;
   align-items: center;
 }
+.popular__title {
+  padding-bottom: 40px;
+  padding-top: 40px;
+  width: 1170px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.popular__line {
+  width: 460px;
+}
 .popular__headding {
   font-size: 1.5rem;
   font-weight: 600;
@@ -449,10 +460,29 @@ body {
   border-radius: 7px;
   color: #45413e;
   border: none;
+  font-size: 1rem;
+  position: relative;
+}
+.card__content {
+  border-radius: 7px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-size: 1rem;
+  position: absolute;
+  width: 268px;
+  height: 365px;
+  left: 0;
+  top: 0;
+}
+.card__overlay {
+  background-image: linear-gradient(to top, rgba(28, 193, 103, 0.8), rgba(46, 211, 162, 0.8));
+  border-radius: 7px;
+  width: 268px;
+  height: 365px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  display: none;
 }
 .card__img {
   display: block;
@@ -484,6 +514,49 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 7px;
+}
+
+.card:hover > .card__overlay {
+  display: block;
+}
+
+.overlay__buttons-group {
+  width: 268px;
+  height: 365px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.overlay__button {
+  width: 90px;
+  height: 90px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  font-size: 2rem;
+}
+.overlay__button_plus {
+  color: #23c46e;
+}
+.overlay__button_heart {
+  color: #e73c68;
+}
+
+.message__content {
+  width: 200px;
+  height: 365px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding: 35px 30px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+}
+.message__text {
+  padding-bottom: 15px;
 }
 
 /*# sourceMappingURL=index.css.map */
