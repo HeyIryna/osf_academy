@@ -1,29 +1,77 @@
 @import 'variables';
 
 .popular {
-    background-color: $background-main;
-    color:white;
-    padding-top: 55px;
-    padding-bottom: 55px;
+  background-color: $background-main;
+  color: white;
+  padding-top: 55px;
+  padding-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 
-    &__headding {
-        font-size: 1.5rem;
-        font-weight: 600;
-        text-align: center;
-    }
+  &__headding {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+  }
+
+  &__list {
+    width: 1170px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+  }
 }
 
 .card {
-    width: 268px;
-    height: 366;
-    border-radius: $element-border-radius;
-    color: $text-main;
-    border: none;
+  width: 268px;
+  height: 365px;
+  border-radius: $element-border-radius;
+  color: $text-main;
+  border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
 
-    &__img {
-        display: block;
-        width: 100%;
-        background-color: $background-main;
-        border-radius: $element-border-radius $element-border-radius 0 0;
-    }
+  &__img {
+    display: block;
+    width: 100%;
+    background-color: $background-main;
+    border-radius: $element-border-radius $element-border-radius 0 0;
+  }
+
+  &__text {
+    height: 105px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+
+  &__title {
+    text-align: center;
+    margin: 0 15px 0 15px;
+    letter-spacing: -1px;
+    line-height: 1.2rem;
+  }
+
+  &__price {
+    font-size: 0.875;
+    margin-bottom: 15px;
+  }
+
+  &__message {
+    background-image: linear-gradient(
+        to top,
+        rgba(103, 91, 153, 0.8),
+        rgba(220, 89, 135, 0.8)
+      ),
+      url('../img/main/message.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    border-radius: $element-border-radius;
+  }
 }

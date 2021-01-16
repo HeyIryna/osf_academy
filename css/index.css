@@ -32,10 +32,15 @@ body {
   text-transform: uppercase;
   font-size: 0.875rem;
 }
-.btn__more {
+.btn__more, .btn__load {
   color: #e8e2d6;
   border-color: #e8e2d6;
   opacity: 0.5;
+}
+.btn__more:hover, .btn__load:hover {
+  background-color: #e8e2d6;
+  border-color: #e8e2d6;
+  color: #45413e;
 }
 .btn__social {
   color: #3b5b96;
@@ -44,6 +49,47 @@ body {
   justify-content: space-evenly;
   align-items: center;
   padding-right: 20px;
+}
+.btn__social:hover {
+  background-color: #3b5b96;
+  border-color: #3b5b96;
+  color: white;
+}
+.btn__split {
+  display: flex;
+  padding-bottom: 10px;
+}
+.btn__split_left {
+  border-radius: 20px 0 0 20px;
+  width: 88px;
+  border-right-width: 1px;
+  color: black;
+  border-color: #e5e5e5;
+  font-weight: 600;
+}
+.btn__split_left:hover {
+  background-color: white;
+  border-color: #e5e5e5;
+  color: #24c36c;
+}
+.btn__split_right {
+  border-radius: 0 20px 20px 0;
+  width: 110px;
+  border-left-width: 1px;
+  color: black;
+  border-color: #e5e5e5;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+.btn__split_right:hover {
+  background-color: white;
+  border-color: #e5e5e5;
+  color: #24c36c;
+}
+.btn__load {
+  width: 266px;
+  opacity: 0.8;
+  margin-top: 50px;
 }
 
 .header {
@@ -381,25 +427,63 @@ body {
   color: white;
   padding-top: 55px;
   padding-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .popular__headding {
   font-size: 1.5rem;
   font-weight: 600;
   text-align: center;
 }
+.popular__list {
+  width: 1170px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
 
 .card {
   width: 268px;
-  height: 366;
+  height: 365px;
   border-radius: 7px;
   color: #45413e;
   border: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 1rem;
 }
 .card__img {
   display: block;
   width: 100%;
   background-color: #262a32;
   border-radius: 7px 7px 0 0;
+}
+.card__text {
+  height: 105px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.card__title {
+  text-align: center;
+  margin: 0 15px 0 15px;
+  letter-spacing: -1px;
+  line-height: 1.2rem;
+}
+.card__price {
+  font-size: 0.875;
+  margin-bottom: 15px;
+}
+.card__message {
+  background-image: linear-gradient(to top, rgba(103, 91, 153, 0.8), rgba(220, 89, 135, 0.8)), url("../img/main/message.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 7px;
 }
 
 /*# sourceMappingURL=index.css.map */
