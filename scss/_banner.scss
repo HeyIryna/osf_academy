@@ -1,0 +1,26 @@
+.banner {
+    height: 445px;
+    background-image: url('../img/main/banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    &__headding {
+        font-size: 3rem;
+        font-weight: 900;
+        padding-bottom: 20px;
+    }
+
+    &__text {
+        width: 335px;
+        hyphens:auto;
+        text-align: center;
+        opacity: 0.9;
+        line-height: 1rem;
+    }
+}

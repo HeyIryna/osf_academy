@@ -10,23 +10,22 @@
   align-items: center;
 
   &__title {
-      padding-bottom: 40px;
-      padding-top: 40px;
-      width: 1170px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
+    padding-bottom: 40px;
+    padding-top: 40px;
+    width: 1170px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
   }
 
   &__line {
-      width: 460px;
+    width: 460px;
   }
 
   &__headding {
     font-size: 1.5rem;
     font-weight: 600;
     text-align: center;
-    
   }
 
   &__list {
@@ -48,27 +47,31 @@
   position: relative;
 
   &__content {
-        border-radius: $element-border-radius;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        position: absolute;
-        width: 268px;
-        height: 365px;
-        left:0;
-        top:0;
-    }
+    border-radius: $element-border-radius;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    width: 268px;
+    height: 365px;
+    left: 0;
+    top: 0;
+  }
 
-    &__overlay {
-        background-image: linear-gradient(to top, rgba(28, 193, 103, 0.8), rgba(46, 211, 162, 0.8));
-        border-radius: $element-border-radius;
-        width: 268px;
-        height: 365px;
-        position: absolute;
-        left:0;
-        top:0;
-        display:none;
-    }
+  &__overlay {
+    background-image: linear-gradient(
+      to top,
+      rgba(28, 193, 103, 0.8),
+      rgba(46, 211, 162, 0.8)
+    );
+    border-radius: $element-border-radius;
+    width: 268px;
+    height: 365px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    display: none;
+  }
 
   &__img {
     display: block;
@@ -109,60 +112,56 @@
     background-size: cover;
     background-position: center;
     border-radius: $element-border-radius;
-    
   }
-
 }
 
 .card:hover > .card__overlay {
-    display:block;
+  display: block;
 }
 
-.overlay{
-    &__buttons-group {
-        width: 268px;
-        height: 365px;
-        display: flex;
-        justify-content: space-evenly;
-        align-items: center;        
+.overlay {
+  &__buttons-group {
+    width: 268px;
+    height: 365px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+
+  &__button {
+    width: 90px;
+    height: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    border-radius: 50%;
+    font-size: 2rem;
+
+    &_plus {
+      color: #23c46e;
     }
 
-    &__button {
-        width: 90px;
-        height: 90px;
-        display: flex;
-        justify-content: center;
-        align-items: center; 
-        background-color: white; 
-        border-radius: 50%;
-        font-size: 2rem;
-
-        &_plus {
-            color: #23c46e;
-        }
-
-        &_heart {
-            color: #e73c68
-        }
+    &_heart {
+      color: #e73c68;
     }
+  }
 }
 
-.message {  
+.message {
+  &__content {
+    width: 200px;
+    height: 365px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 35px 30px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+  }
 
-   &__content {
-       width: 200px;
-       height: 365px;
-       display: flex;
-       flex-direction: column;
-       align-items: flex-start;
-       justify-content: flex-end;
-       padding: 35px 30px;
-       font-size: 1rem;
-       line-height: 1.5rem;
-
-   } 
-
-   &__text {
-       padding-bottom: 15px;
-   }
+  &__text {
+    padding-bottom: 15px;
+  }
 }
