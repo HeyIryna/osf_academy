@@ -50,6 +50,21 @@ body {
   border-color: #e8e2d6;
   color: #45413e;
 }
+.btn__main {
+  color: white;
+  border-color: #85bc23;
+  background-color: #85bc23;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding-right: 20px;
+  width: 185px;
+}
+.btn__main:hover {
+  color: white;
+  border-color: #67911b;
+  background-color: #67911b;
+}
 .btn__social {
   color: #3b5b96;
   border-color: #3b5b96;
@@ -351,6 +366,9 @@ body {
   padding: 0 15px 0 15px;
   color: #999999;
 }
+.menu .settings__item:hover {
+  color: #7f7f7f;
+}
 .menu .operations {
   margin-bottom: 0;
 }
@@ -358,6 +376,9 @@ body {
   padding: 0 15px 10px 15px;
   color: #b2b2b2;
   font-size: 1.4rem;
+}
+.menu .operations__item:hover {
+  color: #7f7f7f;
 }
 
 .navigation .dropdown-toggle::after {
@@ -379,9 +400,12 @@ body {
 .footer__copyright {
   padding-bottom: 25px;
 }
-.footer__menu {
+.footer__menu-desktop {
   display: grid;
   grid-template-columns: 3fr 1fr;
+}
+.footer__menu-mobile {
+  display: none;
 }
 .footer__header {
   color: #45413e;
@@ -390,6 +414,9 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.8125rem;
+}
+.footer__header-mobile {
+  display: none;
 }
 .footer__categories {
   display: grid;
@@ -408,6 +435,9 @@ body {
 .footer__icon:hover {
   color: inherit;
   cursor: pointer;
+}
+.footer__icon:hover {
+  color: #7f7f7f;
 }
 .footer__icon:hover {
   color: #b2b2b2;
@@ -436,6 +466,42 @@ body {
   cursor: pointer;
 }
 
+@media (max-width: 1279px) {
+  .footer {
+    grid-template-columns: 27% 1fr 5%;
+  }
+  .footer__social {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+}
+@media (max-width: 769px) {
+  .footer {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__social {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .footer__header-desktop {
+    display: none;
+  }
+  .footer__header-mobile {
+    display: block;
+  }
+  .footer__menu-desktop {
+    display: none;
+  }
+  .footer__menu-mobile {
+    display: flex;
+    flex-direction: column;
+  }
+  .footer__categories {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .about {
   display: flex;
   height: 560px;
@@ -444,6 +510,7 @@ body {
 }
 .about__carousell {
   width: 75%;
+  display: flex;
 }
 .about__aside {
   width: 25%;
@@ -460,7 +527,7 @@ body {
   background-size: cover;
   background-position: center;
   border-radius: 7px;
-  max-width: 870px;
+  width: 870px;
   height: 505px;
   color: white;
   padding: 70px 65px 45px;
@@ -495,6 +562,10 @@ body {
   width: 336px;
   height: 31px;
   overflow: hidden;
+}
+
+.slick-initialized .slick-slide {
+  display: flex;
 }
 
 .sale {
@@ -708,7 +779,7 @@ body {
   padding-bottom: 20px;
 }
 .banner__text {
-  width: 335px;
+  max-width: 335px;
   hyphens: auto;
   text-align: center;
   opacity: 0.9;
@@ -801,17 +872,21 @@ body {
   }
 }
 .benefits {
-  height: 200px;
+  padding-top: 50px;
+  padding-bottom: 50px;
   background-color: #45413e;
   color: white;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  grid-template-columns: 1fr 1fr 1fr;
 }
 .benefits__item {
   display: flex;
-  width: 330px;
+  max-width: 330px;
   justify-content: space-between;
+  padding-right: 10px;
+  padding-left: 10px;
 }
 .benefits__img {
   padding: 10px 35px 0 0;
@@ -828,6 +903,61 @@ body {
 .benefits__text {
   opacity: 0.4;
   font-size: 0.8125rem;
+}
+
+@media (max-width: 769px) {
+  .benefits {
+    flex-direction: column;
+    align-items: center;
+  }
+  .benefits__item {
+    padding: 15px 0;
+  }
+  .benefits__item:nth-child(even) {
+    flex-direction: row-reverse;
+  }
+  .benefits__img {
+    width: 50%;
+    padding: 0;
+  }
+  .benefits__img img {
+    display: block;
+    margin: 0 auto;
+  }
+  .benefits__content {
+    width: 50%;
+  }
+}
+.signin__content {
+  width: 500px;
+  height: 467px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 50px;
+}
+.signin__heading {
+  font-weight: 600;
+}
+.signin__notification {
+  color: #85bc23;
+  font-size: 0.75rem;
+}
+.signin__control {
+  border-radius: 20px;
+  margin-top: 10px;
+}
+
+.form-group {
+  width: 405px;
+}
+
+.password-group {
+  display: flex;
+  width: 405px;
+  justify-content: space-between;
+  align-items: flex-end;
 }
 
 /*# sourceMappingURL=index.css.map */

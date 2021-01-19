@@ -4,12 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://kit.fontawesome.com/a7bff585f7.js" crossorigin="anonymous"></script>
-    <!-- <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    <link href="slick/slick.css" rel="stylesheet">
+    <link href="slick/slick-theme.css" rel="stylesheet">
     <link rel="stylesheet" href="css/index.css">
     <title>OSF Academy</title>
 </head>
-<body>    
+<body> 
+    
+
     <div class="wrapper_outer ">
         <header class="header wrapper_inner">
             <div class="logo">
@@ -90,24 +93,26 @@
                 </div>
                 <ul class="operations">
                     <li class="operations__item header__item"><i class="fas fa-search"></i></li>
-                    <li class="operations__item header__item"><i class="far fa-user"></i></li>
+                    <li class="operations__item header__item" data-toggle="modal" data-target="#sign-in"><i class="far fa-user"></i></li>
                     <li class="operations__item header__item"><i class="far fa-heart"></i></li>
                     <li class="operations__item header__item"><i class="fas fa-shopping-bag"></i></li>
                 </ul>
+
+                
             </div> 
         </header>
 
         <main class="main">
             <div class="about wrapper_inner">
                 <div class="about__carousell">
-                    <div class="your-class">
+
                         <div class='slide slide__1'>
                             <h1 class="slide__heading">Control and manage any device with cloud solutions</h1>
                             <p class="slide__text">Improve business performance and the user experience with the right mix of IoT technology and processes
                                 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
                             <button type="button" class="btn btn-outline-primary btn__more">View More</button>
                         </div>
-                        <!-- <div class='slide slide__2'>
+                        <div class='slide slide__2'>
                             <h1 class="slide__heading">Control and manage any device with cloud solutions</h1>
                             <p class="slide__text">Improve business performance and the user experience with the right mix of IoT technology and processes
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
@@ -118,8 +123,8 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                             <p class="slide__text">Improve business performance and the user experience with the right mix of IoT technology and processes
 doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
                             <button type="button" class="btn btn-outline-primary">View More</button>
-                        </div> -->
-                      </div>
+                        </div>
+
                 </div>
                 <div class="about__aside">
                     <div class="sale">
@@ -298,12 +303,6 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                                 <span class="card__tag">Awesome</span>                           
                             </div>                            
                         </div>
-                        <!-- <div class="card__overlay">
-                            <div class="overlay__buttons-group">
-                                <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
-                                <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
-                            </div>
-                        </div> -->
                     </div>  
                     <div class="card">
                         <div class="card__content">
@@ -313,12 +312,6 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                                 <span class="card__tag">Marketing</span>                           
                             </div>                            
                         </div>
-                        <!-- <div class="card__overlay">
-                            <div class="overlay__buttons-group">
-                                <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
-                                <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
-                            </div>
-                        </div> -->
                     </div>  
                     <div class="card">
                         <div class="card__content">
@@ -328,12 +321,6 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                                 <span class="card__tag">Awesome</span>                           
                             </div>                            
                         </div>
-                        <!-- <div class="card__overlay">
-                            <div class="overlay__buttons-group">
-                                <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
-                                <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
-                            </div>
-                        </div> -->
                     </div>  
                     <div class="card">
                         <div class="card__content">
@@ -343,12 +330,6 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                                 <span class="card__tag">Marketing</span>                           
                             </div>                            
                         </div>
-                        <!-- <div class="card__overlay">
-                            <div class="overlay__buttons-group">
-                                <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
-                                <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
-                            </div>
-                        </div> -->
                     </div>                    
                 </div>
             </div>
@@ -391,13 +372,24 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                     <p>© Copyright 2021.<br>All Rights Reserved.</p>
                 </div>
                 <div>
-                    <h3 class="footer__header">Contact</h3>
-                    <p>Headquarters:<br> 5600, Blvd. des Galeries, Bur 530<br>Québec G2K 2H6</p>
-                    <p>contact@osf-global.com</p>
-                    <p>+1 (888) 548-4344</p>
+                    <div class="footer__header-desktop">
+                        <h3 class="footer__header">Contact</h3>
+                        <p>Headquarters:<br> 5600, Blvd. des Galeries, Bur 530<br>Québec G2K 2H6</p>
+                        <p>contact@osf-global.com</p>
+                        <p>+1 (888) 548-4344</p>                        
+                    </div>
+                    <div class="footer__header-mobile">
+                        <h3 class="footer__header" data-toggle="collapse" href="#footer__adress">Contact &nbsp; <span>&#129171;</span></h3>
+                        <div class="collapse" id="footer__adress">
+                            <p>Headquarters:<br> 5600, Blvd. des Galeries, Bur 530<br>Québec G2K 2H6</p>
+                            <p>contact@osf-global.com</p>
+                            <p>+1 (888) 548-4344</p>                            
+                        </div>
+                        
+                    </div>
                 </div>
             </div>
-            <div class="footer__menu">
+            <div class="footer__menu-desktop">
                 <div >
                     <h3 class="footer__header">Categories</h3>
                     <div class="footer__categories">
@@ -435,7 +427,46 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                         <a class="categories__item" href="#">Contact</a>
                     </div>                 
                 </div>
-            </div>  
+            </div>
+            <div class="footer__menu-mobile">
+                <div >
+                    <h3 class="footer__header" data-toggle="collapse" href="#footer__categories">Categories&nbsp; <span>&#129171;</span></h3>
+                    <div class="footer__categories collapse" id="footer__categories">
+                        <div class="categories__column">
+                            <a class="categories__item" href="#">Alcohol</a>
+                            <a class="categories__item" href="#">Art</a>
+                            <a class="categories__item" href="#">Books</a>
+                            <a class="categories__item" href="#">Drink</a>
+                            <a class="categories__item" href="#">Electronics</a>
+                        </div>
+                        <div class="categories__column">
+                            <a class="categories__item" href="#">Home</a>
+                            <a class="categories__item" href="#">Jewelry</a>
+                            <a class="categories__item" href="#">Kids & Baby</a>
+                            <a class="categories__item" href="#">Men's Fashion</a>
+                            <a class="categories__item" href="#">Mobile</a>
+                            <a class="categories__item" href="#">Motorcycles</a>
+                            <a class="categories__item" href="#">Movies</a>
+                            <a class="categories__item" href="#">Music</a>
+                        </div>
+                        <div class="categories__column">
+                            <a class="categories__item" href="#">Sport</a>
+                            <a class="categories__item" href="#">Toys</a>
+                            <a class="categories__item" href="#">Travel</a>
+                            <a class="categories__item" href="#">Women's Fashion</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="footer__about">
+                    <h3 class="footer__header" data-toggle="collapse" href="#footer__about">About&nbsp; <span>&#129171;</span></h3>
+                    <div class="categories__column collapse" id="footer__about">
+                        <a class="categories__item" href="#">About us</a>
+                        <a class="categories__item" href="#">Delivery</a>
+                        <a class="categories__item" href="#">Testimonials</a>
+                        <a class="categories__item" href="#">Contact</a>
+                    </div>                 
+                </div>
+            </div>    
             <div class="footer__social">
                 <a class="footer__icon"><i class="fab fa-facebook-f"></i></a>
                 <a class="footer__icon"><i class="fab fa-google-plus-g"></i></a>
@@ -444,12 +475,36 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
 
             </div>  
         </footer>
+
+        <!-- Modal -->
+        <div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+            <div class="modal-content signin__content">
+                <h2 class="signin__heading">Sign in</h2>
+                <div class="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="email" class="form-control signin__control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                  </div>
+                  <div class="form-group">
+                    <div class ="password-group">
+                        <label for="exampleInputPassword1">Lato</label>
+                        <span class="signin__notification">forgot password</span>                          
+                    </div>
+
+                    <input type="password" class="form-control signin__control" id="exampleInputPassword1">
+                  </div>
+                  <button type="submit" class="btn btn__main">login</button>  
+                  <span class="signin__notification">I don’t have an account</span>         
+
+            </div>
+            </div>
+        </div>
     </div>
 
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <!-- <script type="text/javascript" src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-
+    <script src="slick/slick.min.js"></script>
+    <script src="js/index.js"></script>
 </body>
 </html>

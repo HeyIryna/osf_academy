@@ -38,4 +38,8 @@ $element-border-radius: 7px;
   padding: 0 15px 10px 15px;
   color: $icon-color;
   font-size: $font-size;
+
+  &:hover {
+    color: darken($icon-color, 20%);
+  }
 }
