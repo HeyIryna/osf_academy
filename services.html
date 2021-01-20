@@ -7,10 +7,10 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link href="slick/slick.css" rel="stylesheet">
     <link href="slick/slick-theme.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/services.css">
     <title>OSF Academy</title>
 </head>
-<body>
+<body> 
     <div class="wrapper_outer ">
         <!-- <header class="header-desktop wrapper_inner">
             <nav class="navbar navbar-expand-lg navbar-light">
@@ -195,20 +195,12 @@
         </header>
 
         <header class="header-mobile wrapper_inner">
-            <div class="header-mobile__group">
-                <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="logo">
-                    <a class="logo__linc" href="#"><img class="logo__img" src="img\header\osf-logo.png" alt="OSF Logo"></a>                
-                    <div class="logo__name">
-                    </div>            
-                </div>               
+            <img class="header__burger" src="img/header/hamburger_icon.png" alt="Menu">
+            <div class="logo">
+                <a class="logo__linc" href="#"><img class="logo__img" src="img\header\osf-logo.png" alt="OSF Logo"></a>                
+                <div class="logo__name">
+                </div>            
             </div>
-
-
-
-            
             <!-- <div class="menu">
                 <nav class="menu__navigation">
                     <ul class="navigation ">
@@ -261,9 +253,15 @@
                                         <a class="dropdown-item" href="#">Flowers & Plants</a>
                                         <a class="dropdown-item" href="#">Food</a>                                    
                                     </div>
+                                    <div class="dropdown-container">
+                                        <img class="dropdown-img" src="img/header/drop-down-img.jpg" alt="Drop down menu image">
+                                    </div>
                                 </div>                           
                             </div>
                         </li>
+                        <li class="navigation__item header__item"><a class="header__link" href="">Company</a></li>
+                        <li class="navigation__item header__item"><a class="header__link" href="">Library</a></li>
+                        <li class="navigation__item header__item"><a class="header__link" href="">Contact us</a></li>
                     </ul>
                 </nav>
                 <div class="menu__settings">
@@ -281,233 +279,313 @@
             </div>  -->
         </header>
 
-        <div class="collapse wrapper_inner" id="navbarToggleExternalContent">
-            <ul class="navigation">
-                <li class="header__item" data-toggle="collapse" href="#services-group" aria-expanded="false"><span>Services</span> <span>&#129171;</span>
 
-                    <ul id="services-group" class="collapse">
-                        <li>Product categories</li>
-                        <li>Sale</li>
-                    </ul>
+        <main class="main wrapper_inner">
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                  <li class="breadcrumb-item"><a href="#">Home</a></li>
+                  <li class="breadcrumb-item active" aria-current="page">Category</li>
+                </ol>
+            </nav>
+            <div class="services__title">
+                <h1 class="services__headding wrapper_inner"><span>Services</span></h1>
+             </div>
+             <span class="services__hide">Hide Filter</span>
+             <div class="services__box">
 
+                <div class="settings-group">
+                    <label for="size">Price</label>
+                    <select class="form-control services__control" id="size">
+                        <option>$0.00 - $100.00</option>
+                    </select>
+                </div>
+                <div class="settings-group">
+                    <label for="size">Brands</label>
+                    <select class="form-control services__control" id="size">
+                        <option>Ukraine sport</option>
+                    </select>
+                </div>
 
-<!-- 
-                    <h6 class="dropdown-header" id= data-toggle="collapse" href="#header__categories"><span>PRODUCT CATEGORIES</span><span>&#129171;</span></h6>
+                <div class="settings-group">
+                    <label for="size">Size</label>
+                    <select class="form-control services__control" id="size">
+                        <option>$0.00 - $100.00</option>
+                    </select>
+                </div>
+                <div class="settings-group">
+                    <label for="size">Color</label>
+                    <div class="color-group">
+                        <div class="color white"></div>
+                        <div class="color lightblue"></div>
+                        <div class="color black"></div>
+                        <div class="color green"></div>
+                        <div class="color blue"></div>
+                        <div class="color orange"></div>
+                        <div class="color red"></div>
+                        <div class="color grey"></div>
 
+                    </div>
+                </div>
+                <div class="settings-group">
+                    <label for="size">Sort by</label>
+                    <select class="form-control services__control" id="size">
+                        <option>Price</option>
+                    </select>
+                </div>                
+                <div class="settings-group">
+                    <label for="size">Show</label>
+                    <select class="form-control services__control" id="size">
+                        <option>16 per page</option>
+                    </select>
+                </div>
+             </div>
+             <h4 class="services__results">12,931 results in apparel</h4>
+             <div class="popular__list">
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-1.jpg" alt="Kristina Dam Oak Table With White Marble Top">
+                        <div class="card__text">
+                            <p class="card__title">Kristina Dam Oak Table With White Marble Top</p>
+                            <span class="card__price">$ 799.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
 
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-3.jpg" alt="Activate Facial Mask andCharcoal Soap">
+                        <div class="card__text">
+                            <p class="card__title">Activate Facial Mask and<br>Charcoal Soap </p>
+                            <span class="card__price">$ 129.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-4.jpg" alt="Cocktail Table Walnut | YES">
+                        <div class="card__text">
+                            <p class="card__title">Cocktail Table Walnut | YES</p>
+                            <span class="card__price">$ 299.99</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-5.jpg" alt="Hay - About A Lounge Chair AAL 93">
+                        <div class="card__text">
+                            <p class="card__title">Hay - About A Lounge Chair AAL 93</p>
+                            <span class="card__price">$ 659.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-6.jpg" alt="TORY DESK CALENDAR">
+                        <div class="card__text">
+                            <p class="card__title">TORY DESK CALENDAR</p>
+                            <span class="card__price">$ 410.99</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/img-not-font.jpg" alt="CH445 Wing Chair on SUITE NY">
+                        <div class="card__text">
+                            <p class="card__title">CH445 Wing Chair on SUITE NY</p>
+                            <span class="card__price">$ 330.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-7.jpg" alt="CH445 Wing Chair on SUITE NY">
+                        <div class="card__text">
+                            <p class="card__title">CH445 Wing Chair on SUITE NY</p>
+                            <span class="card__price">$ 330.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-1.jpg" alt="Kristina Dam Oak Table With White Marble Top">
+                        <div class="card__text">
+                            <p class="card__title">Kristina Dam Oak Table With White Marble Top</p>
+                            <span class="card__price">$ 799.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/img-not-font.jpg" alt="CH445 Wing Chair on SUITE NY">
+                        <div class="card__text">
+                            <p class="card__title">CH445 Wing Chair on SUITE NY</p>
+                            <span class="card__price">$ 330.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
 
-
-
-
-                    <h6 class="dropdown-header" data-toggle="collapse" href="#header__categories"><span>PRODUCT CATEGORIES</span><span>&#129171;</span></h6>
-        
-                    <div class="header__categories collapse" id="header__categories">
-
-                            <a class="dropdown-item" href="#">Accessories</a>
-                            <a class="dropdown-item" href="#">Alcohol</a>
-                            <a class="dropdown-item" href="#">Art</a>
-                            <a class="dropdown-item" href="#">Books</a>
-                            <a class="dropdown-item" href="#">Drink</a>
-                            <a class="dropdown-item" href="#">Electronics</a>
-                            <a class="dropdown-item" href="#">Flowers & Plants</a>
-                            <a class="dropdown-item" href="#">Food</a>
-                            <a class="dropdown-item" href="#">Gadgets</a>
-                            <a class="dropdown-item" href="#">Garden</a>
-                            <a class="dropdown-item" href="#">Grocery</a>
-                            <a class="dropdown-item" href="#">Home</a>
-                            <a class="dropdown-item" href="#">Jewelry</a>
-                            <a class="dropdown-item" href="#">Kids & Baby</a>
-                            <a class="dropdown-item" href="#">Mens Fashion</a>
-                            <a class="dropdown-item" href="#">Mobile</a> 
-                            <a class="dropdown-item" href="#">Motorcycle</a>
-                            <a class="dropdown-item" href="#">Movies</a>
-                            <a class="dropdown-item" href="#">Music</a>
-                            <a class="dropdown-item" href="#">Office</a>
-                            <a class="dropdown-item" href="#">Pets</a>
-                            <a class="dropdown-item" href="#">Romantic</a>
-                            <a class="dropdown-item" href="#">Sport</a>
-                            <a class="dropdown-item" href="#">Toys</a>
-                    </div> -->
-                
-                </li>
-                <li class="header__item"><span><a class="header__link" href="">Company</a></span></li>
-                <li class="header__item"><span><a class="header__link" href="">Library</a></span></li>
-                <li class="header__item"><span><a class="header__link" href="">Contact us</a></span></li>
-            </ul>
-            <div class="dropdown-container">
-                <img class="dropdown-img" src="img/header/drop-down-img.jpg" alt="Drop down menu image">
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-3.jpg" alt="Activate Facial Mask andCharcoal Soap">
+                        <div class="card__text">
+                            <p class="card__title">Activate Facial Mask and<br>Charcoal Soap </p>
+                            <span class="card__price">$ 129.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/img-not-font.jpg" alt="CH445 Wing Chair on SUITE NY">
+                        <div class="card__text">
+                            <p class="card__title">CH445 Wing Chair on SUITE NY</p>
+                            <span class="card__price">$ 330.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-4.jpg" alt="Cocktail Table Walnut | YES">
+                        <div class="card__text">
+                            <p class="card__title">Cocktail Table Walnut | YES</p>
+                            <span class="card__price">$ 299.99</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-5.jpg" alt="Hay - About A Lounge Chair AAL 93">
+                        <div class="card__text">
+                            <p class="card__title">Hay - About A Lounge Chair AAL 93</p>
+                            <span class="card__price">$ 659.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-6.jpg" alt="TORY DESK CALENDAR">
+                        <div class="card__text">
+                            <p class="card__title">TORY DESK CALENDAR</p>
+                            <span class="card__price">$ 410.99</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/popular-7.jpg" alt="CH445 Wing Chair on SUITE NY">
+                        <div class="card__text">
+                            <p class="card__title">CH445 Wing Chair on SUITE NY</p>
+                            <span class="card__price">$ 330.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="card__content">
+                        <img class="card__img" src="img/main/img-not-font.jpg" alt="CH445 Wing Chair on SUITE NY">
+                        <div class="card__text">
+                            <p class="card__title">CH445 Wing Chair on SUITE NY</p>
+                            <span class="card__price">$ 330.55</span>                           
+                        </div>                            
+                    </div>
+                    <div class="card__overlay">
+                        <div class="overlay__buttons-group">
+                            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+                            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
+                        </div>
+                    </div>
+                </div>
             </div>
-        </div>
+            <button type="button" class="btn btn-outline-primary btn__main">Load More</button>
 
-        <main class="main">
-            <div class="about wrapper_inner">
-                <div class="about__carousell">
-                        <div class='slide slide__1'>
-                            <h1 class="slide__heading">Control and manage any device with cloud solutions</h1>
-                            <p class="slide__text">Improve business performance and the user experience with the right mix of IoT technology and processes
-                                doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
-                            <button type="button" class="btn btn-outline-primary btn__more">View More</button>
-                        </div>
-                        <div class='slide slide__2'>
-                            <h1 class="slide__heading">Control and manage any device with cloud solutions</h1>
-                            <p class="slide__text">Improve business performance and the user experience with the right mix of IoT technology and processes
-doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
-                            <button type="button" class="btn btn-outline-primary">View More</button>
-                        </div>
-                        <div class='slide slide__3'>
-                            <h1 class="slide__heading">Control and manage device with cloud solutions</h1>
-                            <p class="slide__text">Improve business performance and the user experience with the right mix of IoT technology and processes
-doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed</p>
-                            <button type="button" class="btn btn-outline-primary">View More</button>
-                        </div>
-
-                </div>
-                <div class="about__aside">
-                    <div class="sale">
-                        <span class="sale__percents">55%</span>
-                        <span class="sale__text">Summer</span>
-                        <span class="sale__text">Sales</span>
-                    </div>
-                    <p class="social__text_main">Follow us on Facebook</p>
-                    <p class="social__text_secondary">Sed ut perspiciatis unde omnis iste<br> natus error sit</p>
-                    <a class="btn btn-outline-primary btn__social" href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i>Follow</a>
-                </div>
-            </div>
-
-            <div class="popular wrapper_inner">
-                <div class="popular__title ">
-                   <h3 class="popular__headding wrapper_inner"><span>Popular items</span></h3>
-                </div>
-                
-                <div class="popular__list" >
-                    <div class="card">
-                        <div class="card__content">
-                            <img class="card__img" src="img/main/popular-1.jpg" alt="Kristina Dam Oak Table With White Marble Top">
-                            <div class="card__text">
-                                <p class="card__title">Kristina Dam Oak Table With White Marble Top</p>
-                                <span class="card__price">$ 799.55</span>                           
-                            </div>                            
-                        </div>
-                        <div class="card__overlay">
-                            <div class="overlay__buttons-group">
-                                <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
-                                <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="card">
-                        <div class="card__content">
-                            <img class="card__img" src="img/main/popular-2.jpg" alt="Hay - About A LoungeChair AAL 93">
-                            <div class="card__text">
-                                <p class="card__title">Hay - About A Lounge<br>Chair AAL 93</p>
-                                <div class="btn__split">
-                                    <button type="button" class="btn btn-outline-primary btn__split_left">$659.55</button>
-                                    <button type="button" class="btn btn-outline-primary btn__split_right">Buy now</button>   
-                                </div>                        
-                            </div>                            
-                        </div>
-                        <div class="card__overlay">
-                            <div class="overlay__buttons-group">
-                                <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
-                                <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__content">
-                            <img class="card__img" src="img/main/popular-3.jpg" alt="Activate Facial Mask andCharcoal Soap">
-                            <div class="card__text">
-                                <p class="card__title">Activate Facial Mask and<br>Charcoal Soap </p>
-                                <span class="card__price">$ 129.55</span>                           
-                            </div>                            
-                        </div>
-                        <div class="card__overlay">
-                            <div class="overlay__buttons-group">
-                                <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
-                                <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__content">
-                            <img class="card__img" src="img/main/popular-4.jpg" alt="Cocktail Table Walnut | YES">
-                            <div class="card__text">
-                                <p class="card__title">Cocktail Table Walnut | YES</p>
-                                <span class="card__price">$ 299.99</span>                           
-                            </div>                            
-                        </div>
-                        <div class="card__overlay">
-                            <div class="overlay__buttons-group">
-                                <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
-                                <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__content">
-                            <img class="card__img" src="img/main/popular-5.jpg" alt="Hay - About A Lounge Chair AAL 93">
-                            <div class="card__text">
-                                <p class="card__title">Hay - About A Lounge Chair AAL 93</p>
-                                <span class="card__price">$ 659.55</span>                           
-                            </div>                            
-                        </div>
-                        <div class="card__overlay">
-                            <div class="overlay__buttons-group">
-                                <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
-                                <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__content">
-                            <img class="card__img" src="img/main/popular-6.jpg" alt="TORY DESK CALENDAR">
-                            <div class="card__text">
-                                <p class="card__title">TORY DESK CALENDAR</p>
-                                <span class="card__price">$ 410.99</span>                           
-                            </div>                            
-                        </div>
-                        <div class="card__overlay">
-                            <div class="overlay__buttons-group">
-                                <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
-                                <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card__content">
-                            <img class="card__img" src="img/main/popular-7.jpg" alt="CH445 Wing Chair on SUITE NY">
-                            <div class="card__text">
-                                <p class="card__title">CH445 Wing Chair on SUITE NY</p>
-                                <span class="card__price">$ 330.55</span>                           
-                            </div>                            
-                        </div>
-                        <div class="card__overlay">
-                            <div class="overlay__buttons-group">
-                                <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
-                                <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
-                            </div>
-                        </div>
-                    </div>
-                    <div class="card__message">
-                        <div class="message__content">
-                            <span class="message__text">My dragons are 
-                                misbehaving again.
-                                Unbelieveable!</span>
-                            <div>
-                            <img class="message__icon" src="img/main/message-icon.png" alt="Message">
-                            <span class="message__time">5h ago</span>                            
-                        </div>
-
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-outline-primary btn__load">Load More &nbsp;&nbsp;<i class="fas fa-redo"></i></button>
-            </div>
-            <div class="banner wrapper_inner">
-                <h2 class="banner__headding">Banner OSF Theme</h2>
-                <p class="banner__text">Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium </p>
-            </div> 
             <div class="featured wrapper_inner">
                 <div class="featured__title">
                     <h3 class="featured__headding">Featured Products</h3>
@@ -568,36 +646,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                         </div>
                     </div>                    
                 </div>
-            </div>
-            <div class="benefits wrapper_inner">
-                <div class="benefits__item">
-                    <div class="benefits__img">
-                        <img  src="img/main/Delivery.png" alt="Focus">                        
-                    </div>
-                    <div class="benefits__content">
-                        <span class="benefits__title">Focus</span>
-                        <span class="benefits__text">Our unwavering focus on superior service delivery and building next generation competencies</span>
-                    </div>
-                </div>
-                <div class="benefits__item">
-                    <div class="benefits__img">
-                        <img  src="img/main//Triangular.png" alt="Clipboard">                        
-                    </div>
-                    <div class="benefits__content">
-                        <span class="benefits__title">method</span>
-                        <span class="benefits__text">A standardized methodology designed to deliver measurable business results and predictable costs</span>
-                    </div>
-                </div>
-                <div class="benefits__item">
-                    <div class="benefits__img">
-                        <img  src="img/main/Clipboard.png" alt="Knowledge">                        
-                    </div>
-                    <div class="benefits__content">
-                        <span class="benefits__title">Knowledge</span>
-                        <span class="benefits__text">A highly skilled, proactive workforce that reliably improves each client’s ROI while mitigating their business risk</span>
-                    </div>
-                </div>
-            </div>
+            </div> 
         </main>
 
         <footer class="footer wrapper_inner ">
@@ -618,8 +667,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                             <p>Headquarters:<br> 5600, Blvd. des Galeries, Bur 530<br>Québec G2K 2H6</p>
                             <p>contact@osf-global.com</p>
                             <p>+1 (888) 548-4344</p>                            
-                        </div>
-                        
+                        </div>                        
                     </div>
                 </div>
             </div>
@@ -706,7 +754,6 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                 <a class="footer__icon"><i class="fab fa-google-plus-g"></i></a>
                 <a class="footer__icon"><i class="fab fa-twitter"></i></a>
                 <a class="footer__icon"><i class="fab fa-pinterest-p"></i></a>
-
             </div>  
         </footer>
 
@@ -718,18 +765,16 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
                     <input type="email" class="form-control signin__control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                </div>
-                <div class="form-group">
-                <div class ="password-group">
-                    <label for="exampleInputPassword1">Lato</label>
-                    <span class="signin__notification">forgot password</span>                          
-                </div>
-
-                <input type="password" class="form-control signin__control" id="exampleInputPassword1">
-                </div>
-                <button type="submit" class="btn btn__main">login</button>  
-                  <span class="signin__notification">I don’t have an account</span>         
-
+                  </div>
+                  <div class="form-group">
+                    <div class ="password-group">
+                        <label for="exampleInputPassword1">Lato</label>
+                        <span class="signin__notification">forgot password</span>                          
+                    </div>
+                    <input type="password" class="form-control signin__control" id="exampleInputPassword1">
+                  </div>
+                  <button type="submit" class="btn btn__main">login</button>  
+                  <span class="signin__notification">I don’t have an account</span> 
             </div>
             </div>
         </div>
@@ -738,12 +783,6 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-
-
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
     <script src="slick/slick.min.js"></script>
-    <script src="js/index.js"></script>
 </body>
 </html>

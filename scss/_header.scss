@@ -1,6 +1,6 @@
 @import 'variables';
 
-.header {
+.header-desktop {
   position: fixed;
   display: flex;
   width: 1280px;
@@ -10,7 +10,13 @@
   justify-content: space-between;
   height: 80px;
   border-bottom: 1px solid #e8e2d6;
+}
 
+.header-mobile {
+  display: none;
+}
+
+.header {
   &__item {
     list-style: none;
     display: inline-block;
@@ -60,9 +66,16 @@
   }
 }
 
+// .navbar {
+//   max-width: 1280px;
+//   display: flex;
+//   justify-content: space-between;
+// }
+
 .menu {
   display: flex;
   align-items: center;
+  justify-content: flex-end;
   height: 80px;
 
   &__navigation {
@@ -177,4 +190,83 @@
 
 .settings .dropdown-toggle::after {
   margin-left: 15px;
+}
+
+@media (max-width: 769px) {
+  .header-desktop {
+    display: none;
+  }
+
+  .header-mobile {
+    position: fixed;
+    background-color: white;
+    z-index: 1;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    height: 60px;
+    border-bottom: 1px solid #e8e2d6;
+
+    &__group {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    & .navbar-toggler {
+      position: absolute;
+      left: 0;
+      top: 25%;
+      padding: 0;
+
+      &:focus {
+        text-decoration: none;
+        outline: 0;
+        box-shadow: none;
+      }
+    }
+
+    // & .navbar-toggler-icon {
+    //   color: black;
+    // }
+  }
+
+  .logo__img {
+    width: 45px;
+    height: 45px;
+  }
+
+  .collapse {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-color: $background-main;
+    color: white;
+
+    // padding: 30px 0;
+  }
+
+  .collapsing {
+    padding-top: 60px;
+    padding-bottom: 30px;
+    background-color: $background-main;
+    color: white;
+  }
+
+  .navigation {
+    padding-left: 0;
+  }
+
+  .header__item {
+    display: block;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .dropdown-img {
+    width: 100%;
+    border-radius: 5px;
+  }
 }
