@@ -12,100 +12,6 @@
 </head>
 <body>
     <div class="wrapper_outer ">
-        <!-- <header class="header-desktop wrapper_inner">
-            <nav class="navbar navbar-expand-lg navbar-light">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="logo">
-                    <a class="logo__linc" href="#"><img class="logo__img" src="img\header\osf-logo.png" alt="OSF Logo"></a>                
-                    <div class="logo__name">
-                        <span class="logo__name_main">OSF</span>
-                        <span class="logo__name_secondary">Academy</span>
-                    </div>            
-                </div>
-                
-                <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
-                    <nav class="menu__navigation">
-                        <ul class="navigation ">
-                            <li class="navigation__item header__item dropdown dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services
-                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                                    <div class="services wrapper_outer dropdown-menu-right">
-                                        <div>
-                                            <h6 class="dropdown-header">PRODUCT CATEGORIES</h6>
-                                            <div class="categories">
-                                                <div>
-                                                    <a class="dropdown-item" href="#">Accessories</a>
-                                                    <a class="dropdown-item" href="#">Alcohol</a>
-                                                    <a class="dropdown-item" href="#">Art</a>
-                                                    <a class="dropdown-item" href="#">Books</a>
-                                                    <a class="dropdown-item" href="#">Drink</a>
-                                                    <a class="dropdown-item" href="#">Electronics</a>
-                                                    <a class="dropdown-item" href="#">Flowers & Plants</a>
-                                                    <a class="dropdown-item" href="#">Food</a>                                        
-                                                </div>
-                                                <div>
-                                                    <a class="dropdown-item" href="#">Gadgets</a>
-                                                    <a class="dropdown-item" href="#">Garden</a>
-                                                    <a class="dropdown-item" href="#">Grocery</a>
-                                                    <a class="dropdown-item" href="#">Home</a>
-                                                    <a class="dropdown-item" href="#">Jewelry</a>
-                                                    <a class="dropdown-item" href="#">Kids & Baby</a>
-                                                    <a class="dropdown-item" href="#">Mens Fashion</a>
-                                                    <a class="dropdown-item" href="#">Mobile</a>                                        
-                                                </div>
-                                                <div>
-                                                    <a class="dropdown-item" href="#">Motorcycle</a>
-                                                    <a class="dropdown-item" href="#">Movies</a>
-                                                    <a class="dropdown-item" href="#">Music</a>
-                                                    <a class="dropdown-item" href="#">Office</a>
-                                                    <a class="dropdown-item" href="#">Pets</a>
-                                                    <a class="dropdown-item" href="#">Romantic</a>
-                                                    <a class="dropdown-item" href="#">Sport</a>
-                                                    <a class="dropdown-item" href="#">Toys</a>                                        
-                                                </div>  
-                                            </div>                                    
-                                        </div>
-                                        <div>
-                                            <h6 class="dropdown-header">SALE</h6>
-                                            <a class="dropdown-item" href="#">Accessories</a>
-                                            <a class="dropdown-item" href="#">Alcohol</a>
-                                            <a class="dropdown-item" href="#">Art</a>
-                                            <a class="dropdown-item" href="#">Books</a>
-                                            <a class="dropdown-item" href="#">Drink</a>
-                                            <a class="dropdown-item" href="#">Electronics</a>
-                                            <a class="dropdown-item" href="#">Flowers & Plants</a>
-                                            <a class="dropdown-item" href="#">Food</a>                                    
-                                        </div>
-                                        <div class="dropdown-container">
-                                            <img class="dropdown-img" src="img/header/drop-down-img.jpg" alt="Drop down menu image">
-                                        </div>
-                                    </div>                           
-                                </div>
-                            </li>
-                            <li class="navigation__item header__item"><a class="header__link" href="">Company</a></li>
-                            <li class="navigation__item header__item"><a class="header__link" href="">Library</a></li>
-                            <li class="navigation__item header__item"><a class="header__link" href="">Contact us</a></li>
-                        </ul>
-                    </nav>
-                    <div class="menu__settings">
-                        <ul class="settings">
-                            <li class="settings__item header__item dropdown-toggle">EN</li>
-                            <li class="settings__item header__item dropdown-toggle">$US</li>
-                        </ul>
-                    </div>
-                    <ul class="operations">
-                        <li class="operations__item header__item"><i class="fas fa-search"></i></li>
-                        <li class="operations__item header__item" data-toggle="modal" data-target="#sign-in"><i class="far fa-user"></i></li>
-                        <li class="operations__item header__item"><i class="far fa-heart"></i></li>
-                        <li class="operations__item header__item"><i class="fas fa-shopping-bag"></i></li>
-                    </ul>
-
-
-                </div>
-            </nav>
-        </header> -->
-
         <header class="header-desktop wrapper_inner">
             <div class="logo">
                 <a class="logo__linc" href="#"><img class="logo__img" src="img\header\osf-logo.png" alt="OSF Logo"></a>                
@@ -707,7 +613,13 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                 <a class="footer__icon"><i class="fab fa-twitter"></i></a>
                 <a class="footer__icon"><i class="fab fa-pinterest-p"></i></a>
 
-            </div>  
+            </div>
+            <ul class="operations_mobile">
+                <li class="operations__item"><i class="fas fa-search"></i></li>
+                <li class="operations__item" data-toggle="modal" data-target="#sign-in"><i class="far fa-user"></i></li>
+                <li class="operations__item"><i class="far fa-heart"></i></li>
+                <li class="operations__item"><i class="fas fa-shopping-bag"></i></li>
+            </ul>  
         </footer>
 
         <!-- Modal -->
@@ -728,8 +640,7 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                 <input type="password" class="form-control signin__control" id="exampleInputPassword1">
                 </div>
                 <button type="submit" class="btn btn__main">login</button>  
-                  <span class="signin__notification">I don’t have an account</span>         
-
+                <span class="signin__notification">I don’t have an account</span> 
             </div>
             </div>
         </div>
@@ -738,11 +649,6 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
-
-
-    <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
     <script src="slick/slick.min.js"></script>
     <script src="js/index.js"></script>
 </body>

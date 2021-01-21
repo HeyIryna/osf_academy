@@ -178,6 +178,10 @@
   .operations {
     margin-bottom: 0;
 
+    &_mobile {
+      display: none;
+    }
+
     &__item {
       @include icon(1.4rem);
     }

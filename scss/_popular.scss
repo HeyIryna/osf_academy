@@ -12,7 +12,6 @@
   &__title {
     padding-bottom: 40px;
     padding-top: 40px;
-    width: 1170px;
   }
 
   &__headding {
@@ -90,7 +89,7 @@
 @media (max-width: 769px) {
   .popular {
     &__list {
-      width: 290px;
+      margin: 0;
     }
   }
 

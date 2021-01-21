@@ -391,6 +391,9 @@ body {
 .menu .operations {
   margin-bottom: 0;
 }
+.menu .operations_mobile {
+  display: none;
+}
 .menu .operations__item {
   padding: 0 15px 10px 15px;
   color: #b2b2b2;
@@ -567,6 +570,7 @@ body {
   .footer {
     display: flex;
     flex-direction: column;
+    margin-bottom: 55px;
   }
   .footer__social {
     flex-direction: row;
@@ -588,6 +592,33 @@ body {
   .footer__categories {
     display: flex;
     flex-direction: column;
+  }
+
+  .operations_mobile {
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #262a32;
+    height: 55px;
+    margin-bottom: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid #b2b2b2;
+    padding-left: 0;
+  }
+  .operations_mobile .operations__item {
+    list-style: none;
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 1rem;
+    letter-spacing: -0.01rem;
+    font-weight: 600;
+    color: #7c8084;
+    margin: 0 20px;
+    font-size: 1.5rem;
   }
 }
 .signin__content {
@@ -648,7 +679,6 @@ body {
 .popular__title {
   padding-bottom: 40px;
   padding-top: 40px;
-  width: 1170px;
 }
 .popular__headding {
   font-size: 1.5rem;
@@ -716,7 +746,7 @@ body {
 }
 @media (max-width: 769px) {
   .popular__list {
-    width: 290px;
+    margin: 0;
   }
 
   .message__content {
