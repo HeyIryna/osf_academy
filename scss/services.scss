@@ -13,12 +13,13 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .services {
   &__title {
     padding-bottom: 40px;
-    width: 1170px;
+    max-width: 1170px;
   }
 
   &__headding {
@@ -183,6 +184,9 @@
   }
 
   .popular__list {
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
     padding-bottom: 50px;
   }
   .btn__main {

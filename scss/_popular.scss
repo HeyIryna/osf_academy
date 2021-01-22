@@ -87,10 +87,11 @@
 }
 
 @media (max-width: 769px) {
-  .popular {
-    &__list {
+  .popular__list {
       margin: 0;
-    }
+      // flex-direction: column;
+      // align-items: center;
+      // width: 100%;
   }
 
   .message {

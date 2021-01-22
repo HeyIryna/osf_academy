@@ -45,6 +45,12 @@ body {
   text-transform: uppercase;
   font-size: 0.875rem;
 }
+.btn:focus {
+  box-shadow: none;
+}
+.btn:focus:active {
+  box-shadow: none;
+}
 .btn__more, .btn__load {
   color: #e8e2d6;
   border-color: #e8e2d6;
@@ -234,6 +240,20 @@ body {
 
 .fa-caret-down {
   padding-left: 15px;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
 }
 
 .header-desktop {
@@ -731,6 +751,11 @@ body {
   color: #67911b;
 }
 
+@media (max-width: 769px) {
+  .breadcrumb {
+    padding-top: 15px;
+  }
+}
 .popular {
   background-color: #262a32;
   color: white;
@@ -1074,10 +1099,6 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
-
-  .breadcrumb {
-    width: 100%;
   }
 
   .product__headding {

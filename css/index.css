@@ -45,6 +45,12 @@ body {
   text-transform: uppercase;
   font-size: 0.875rem;
 }
+.btn:focus {
+  box-shadow: none;
+}
+.btn:focus:active {
+  box-shadow: none;
+}
 .btn__more, .btn__load {
   color: #e8e2d6;
   border-color: #e8e2d6;
@@ -234,6 +240,20 @@ body {
 
 .fa-caret-down {
   padding-left: 15px;
+}
+
+.slick-dots li button {
+  font-size: 0;
+  line-height: 0;
+  display: block;
+  width: 20px;
+  height: 20px;
+  padding: 5px;
+  cursor: pointer;
+  color: transparent;
+  border: 0;
+  outline: none;
+  background: transparent;
 }
 
 .header-desktop {
@@ -694,6 +714,7 @@ body {
 .about__carousell {
   width: 75%;
   display: flex;
+  height: 505px;
 }
 .about__aside {
   width: 25%;
@@ -703,6 +724,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+}
+.about .slick-dots {
+  bottom: 25px;
 }
 
 .slide {
@@ -745,10 +769,6 @@ body {
   width: 336px;
   height: 31px;
   overflow: hidden;
-}
-
-.slick-initialized .slick-slide {
-  display: flex;
 }
 
 .sale {
@@ -826,7 +846,7 @@ body {
   }
 
   .slide {
-    padding: 5%;
+    padding: 15px;
   }
   .slide__heading {
     font-size: 2rem;

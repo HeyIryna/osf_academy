@@ -14,3 +14,9 @@
     color: darken($primary, 10%);
   }
 }
+
+@media (max-width: 769px) {
+  .breadcrumb {
+    padding-top: 15px;
+  }
+}
