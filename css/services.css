@@ -232,6 +232,10 @@ body {
   color: #67911b;
 }
 
+.fa-caret-down {
+  padding-left: 15px;
+}
+
 .header-desktop {
   position: fixed;
   display: flex;
@@ -263,9 +267,9 @@ body {
   text-decoration: none;
   color: #45413e;
   width: 372px;
-  height: 10px;
   font-weight: 600;
   font-size: 1rem;
+  color: white;
 }
 .header__link:visited {
   color: inherit;
@@ -466,13 +470,43 @@ body {
   .navigation {
     padding-left: 0;
   }
+  .navigation .categories__item {
+    padding-left: 25px;
+  }
 
   .header__item {
-    display: block;
     padding: 15px 0;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .header__link {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+
+  .header__collapsed {
+    padding: 0;
+  }
+
+  .dropdown-header {
+    text-decoration: none;
+    color: #45413e;
+    text-transform: capitalize;
+    color: white;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    font-weight: 400;
+  }
+  .dropdown-header:visited {
+    color: inherit;
+  }
+  .dropdown-header:hover {
+    color: inherit;
+    cursor: pointer;
   }
 
   .dropdown-img {
@@ -505,6 +539,15 @@ body {
   font-weight: 600;
   text-transform: uppercase;
   font-size: 0.8125rem;
+  text-decoration: none;
+  color: #45413e;
+}
+.footer__header:visited {
+  color: inherit;
+}
+.footer__header:hover {
+  color: inherit;
+  cursor: pointer;
 }
 .footer__header-mobile {
   display: none;
@@ -548,6 +591,9 @@ body {
   text-decoration: none;
   color: #45413e;
   padding: 8px 0;
+  text-transform: capitalize;
+  font-weight: 400;
+  font-size: 0.8125rem;
 }
 .categories__item:visited {
   color: inherit;
@@ -555,6 +601,10 @@ body {
 .categories__item:hover {
   color: inherit;
   cursor: pointer;
+}
+
+.operations_mobile {
+  display: none;
 }
 
 @media (max-width: 1279px) {
@@ -593,6 +643,16 @@ body {
     display: flex;
     flex-direction: column;
   }
+  .footer__collapsed {
+    background-color: white;
+    color: #45413e;
+    padding: 0;
+  }
+  .footer__header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 8px;
+  }
 
   .operations_mobile {
     position: fixed;
@@ -619,6 +679,10 @@ body {
     color: #7c8084;
     margin: 0 20px;
     font-size: 1.5rem;
+  }
+
+  .categories__item {
+    padding-left: 10px;
   }
 }
 .signin__content {
