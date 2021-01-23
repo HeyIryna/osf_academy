@@ -25,6 +25,10 @@
   .slick-dots {
     bottom: 25px;
   }
+
+  .slick-initialized .slick-slide {
+    display: flex;
+  }
 }
 
 
@@ -42,19 +46,30 @@
   flex-direction: column;
 
   &__1 {
+    display: flex;
     background: url('../img/main/carousel-img-1.jpg') rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
     filter: contrast(150%);
-    align-items: flex-start;
+    align-items: flex-start;    
   }
 
   &__2 {
+    display: flex;
     background-image: url('../img/main/carousel-img-2.jpg');
     align-items: center;
+
+    .slide__heading, .slide__text {
+      text-align: center;
+    }
   }
   &__3 {
+    display: flex;
     background-image: url('../img/main/carousel-img-3.jpg');
     align-items: flex-end;
+
+    .slide__heading, .slide__text {
+      text-align: end;
+    }
   }
 
   &__heading {
@@ -175,6 +190,7 @@
       height: auto;
       font-size: 1.2rem;
       line-height: 1.5rem;
+      margin-bottom: 20px;
     }
   }
 

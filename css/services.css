@@ -256,6 +256,45 @@ body {
   background: transparent;
 }
 
+.color {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+}
+
+.white {
+  background-color: white;
+  border: 1px solid lightgrey;
+}
+
+.lightblue {
+  background-color: #43c0cf;
+}
+
+.black {
+  background-color: #3d402f;
+}
+
+.green {
+  background-color: #4aaf00;
+}
+
+.blue {
+  background-color: #315bbd;
+}
+
+.orange {
+  background-color: #ec6115;
+}
+
+.red {
+  background-color: #dc041d;
+}
+
+.grey {
+  background-color: #efead7;
+}
+
 .header-desktop {
   position: fixed;
   display: flex;
@@ -302,6 +341,7 @@ body {
 .logo {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 .logo__name {
   display: flex;
@@ -768,16 +808,20 @@ body {
 .popular__title {
   padding-bottom: 40px;
   padding-top: 40px;
+  width: 100%;
 }
-.popular__headding {
+.popular__heading {
   font-size: 1.5rem;
   font-weight: 600;
+  width: 100%;
   text-align: center;
-  line-height: 0;
+  border-bottom: 2px solid #393e44;
+  line-height: 0.1rem;
+  margin: 10px 0 20px;
 }
-.popular__headding span {
-  display: inline-block;
-  position: relative;
+.popular__heading span {
+  background: #262a32;
+  padding: 0 50px;
 }
 .popular__list {
   width: 1170px;
@@ -785,25 +829,6 @@ body {
   flex-wrap: wrap;
   justify-content: space-between;
   grid-gap: 30px;
-}
-
-.popular__headding span:before,
-.popular__headding span:after {
-  content: "";
-  position: absolute;
-  border-top: 1px solid white;
-  width: 500px;
-  opacity: 0.2;
-}
-
-.popular__headding span:before {
-  right: 100%;
-  margin-right: 15px;
-}
-
-.popular__headding span:after {
-  left: 100%;
-  margin-left: 15px;
 }
 
 .message__content {
@@ -838,17 +863,12 @@ body {
     margin: 0;
   }
 
-  .message__content {
-    width: 100%;
+  .popular__heading span {
+    padding: 0 20px;
   }
 
-  .popular__headding span:before,
-.popular__headding span:after {
-    content: "";
-    position: absolute;
-    border-top: 1px solid white;
-    width: 90px;
-    opacity: 0.2;
+  .message__content {
+    width: 100%;
   }
 
   .btn__load {
@@ -937,18 +957,20 @@ body {
 
 .services__title {
   padding-bottom: 40px;
-  max-width: 1170px;
+  width: 100%;
 }
-.services__headding {
+.services__heading {
   font-size: 3rem;
   font-weight: 900;
   text-align: center;
-  line-height: 0;
-  padding-bottom: 30px;
+  width: 100%;
+  border-bottom: 2px solid white;
+  line-height: 0.1rem;
+  margin: 10px 0 20px;
 }
-.services__headding span {
-  display: inline-block;
-  position: relative;
+.services__heading span {
+  background: #f1edea;
+  padding: 0 50px;
 }
 .services__box {
   display: grid;
@@ -977,24 +999,6 @@ body {
   display: none;
 }
 
-.services__headding span:before,
-.services__headding span:after {
-  content: "";
-  position: absolute;
-  border-top: 2px solid white;
-  width: 400px;
-}
-
-.services__headding span:before {
-  right: 100%;
-  margin-right: 90px;
-}
-
-.services__headding span:after {
-  left: 100%;
-  margin-left: 90px;
-}
-
 .settings-group {
   display: flex;
   align-items: center;
@@ -1011,45 +1015,6 @@ body {
   width: 200px;
 }
 
-.color {
-  height: 14px;
-  width: 14px;
-  border-radius: 50%;
-}
-
-.white {
-  background-color: white;
-  border: 1px solid lightgrey;
-}
-
-.lightblue {
-  background-color: #43c0cf;
-}
-
-.black {
-  background-color: #3d402f;
-}
-
-.green {
-  background-color: #4aaf00;
-}
-
-.blue {
-  background-color: #315bbd;
-}
-
-.orange {
-  background-color: #ec6115;
-}
-
-.red {
-  background-color: #dc041d;
-}
-
-.grey {
-  background-color: #efead7;
-}
-
 .popular__list {
   padding-bottom: 100px;
 }
@@ -1060,8 +1025,11 @@ body {
 }
 
 @media (max-width: 769px) {
-  .services__headding {
+  .services__heading {
     font-size: 1.5rem;
+  }
+  .services__heading span {
+    padding: 0 20px;
   }
   .services__title {
     padding-bottom: 10px;
@@ -1074,20 +1042,6 @@ body {
   .services__box {
     display: flex;
     flex-direction: column;
-  }
-
-  .services__headding span:before,
-.services__headding span:after {
-    content: "";
-    width: 80px;
-  }
-
-  .services__headding span:before {
-    margin-right: 40px;
-  }
-
-  .services__headding span:after {
-    margin-left: 40px;
   }
 
   .popular__list {

@@ -13,25 +13,33 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .product {
-  //   &__title {
-  //     padding-bottom: 40px;
-  //     width: 1170px;
-  //   }
+    &__title {
+      padding-bottom: 40px;
+      padding-top: 40px;
+      width: 100%;
+    }
 
-  &__headding {
+  &__heading {
     font-size: 3rem;
     font-weight: 900;
     text-align: center;
-    line-height: 0;
-    padding-bottom: 30px;
+    width: 100%;
+    border-bottom: 2px solid white;
+    line-height: 0.1rem;
+    margin: 10px 0 20px;
 
     & span {
-      display: inline-block;
-      position: relative;
+      background: $not-bound-background;
+      padding: 0 50px;
     }
+  }
+
+  &__img-box {
+    position: relative;
   }
 
   &__box {
@@ -92,23 +100,6 @@
   }
 }
 
-.product__headding span:before,
-.product__headding span:after {
-  content: '';
-  position: absolute;
-  border-top: 2px solid white;
-  width: 400px;
-}
-
-.product__headding span:before {
-  right: 100%;
-  margin-right: 90px;
-}
-.product__headding span:after {
-  left: 100%;
-  margin-left: 90px;
-}
-
 .img {
   &__box {
     width: 70px;
@@ -116,6 +107,15 @@
     margin-top: 20px;
     margin-left: 20px;
     position: relative;
+  }
+
+  &__expand {
+    position: absolute;
+    z-index: 1;
+    color: $primary;
+    top: 20px;
+    left: 25px;
+    font-size: 1.5rem;
   }
 
   &__overlay {
@@ -215,8 +215,14 @@
   }
 }
 
-.popular__title {
-  text-transform: uppercase;
+.popular__heading {
+  text-transform: uppercase;  
+  border-bottom: 2px solid #e7e3e0;
+
+  span {
+    background: $not-bound-background;
+    //color: #262a32;
+  }
 }
 
 .benefits {
@@ -225,12 +231,23 @@
   margin-top: 75px;
 }
 
+.color-select {
+  display: flex;
+  align-items: center;
+  padding-left: 10px;
+}
+
+.color {
+  height: 20px;
+  width: 20px;
+  margin-right: 20px;
+}
+
+.btn__scroll {
+  display: none;
+}
+
 @media (max-width: 769px) {
-  .main {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
 
   .product {
     &__headding {
@@ -289,26 +306,16 @@
     }
   }
 
-  .product__headding span:before,
-  .product__headding span:after {
-    content: '';
-    width: 20px;
-    display: none;
-  }
-
-  .product__headding span:before {
-    margin-right: 20px;
-  }
-  .product__headding span:after {
-    margin-left: 20px;
-  }
-
   .popular__list {
-    //padding-bottom: 50px;
     width: 290px;
   }
   .btn__main {
     margin-bottom: 50px;
+  }
+
+  .btn__scroll {
+    margin-top: 40px;
+    display: block;
   }
 
   .tabs__group {
@@ -322,4 +329,8 @@
   .amount {
     margin-bottom: 20px;
   }
+
+  .benefits {
+    margin-top: 0;
+}
 }

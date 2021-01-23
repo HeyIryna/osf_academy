@@ -142,7 +142,6 @@ body {
         color: #24c36c;
       }
     }
-
   }
 
   &__load {
@@ -151,9 +150,6 @@ body {
     opacity: 0.8;
     margin-top: 50px;
   }
-
-
-
 }
 
 .card {
@@ -311,4 +307,43 @@ body {
   border: 0;
   outline: none;
   background: transparent;
+}
+
+.color {
+  height: 14px;
+  width: 14px;
+  border-radius: 50%;
+}
+
+.white {
+  background-color: white;
+  border: 1px solid lightgrey;
+}
+
+.lightblue {
+  background-color: #43c0cf;
+}
+
+.black {
+  background-color: #3d402f;
+}
+
+.green {
+  background-color: #4aaf00;
+}
+
+.blue {
+  background-color: #315bbd;
+}
+
+.orange {
+  background-color: #ec6115;
+}
+
+.red {
+  background-color: #dc041d;
+}
+
+.grey {
+  background-color: #efead7;
 }

@@ -13,13 +13,13 @@
 <body>
     <div class="wrapper_outer "> 
         <header class="header-desktop wrapper_inner">
-            <div class="logo">
-                <a class="logo__linc" href="#"><img class="logo__img" src="img/header/osf-logo.png" alt="OSF Logo"></a>                
+            <a class="logo" href="./index.html">
+                <img class="logo__img" src="./img/header/osf-logo.png" alt="OSF Logo">               
                 <div class="logo__name">
                     <span class="logo__name_main">OSF</span>
                     <span class="logo__name_secondary">Academy</span>
                 </div>            
-            </div>
+            </a>
             <div class="menu">
                 <nav class="menu__navigation">
                     <ul class="navigation ">
@@ -171,13 +171,15 @@
                     <li class="breadcrumb-item active" aria-current="page">Ruffle Front V-Neck Cardigan</li>
                     </ol>
                 </nav>
+
                 <div class="product__title">
-                    <h1 class="product__headding"><span>Ruffle Front V-Neck Cardigan</span></h1>
+                    <h1 class="product__heading"><span>Ruffle Front V-Neck Cardigan</span></h1>
                 </div>
 
                 <div class="product__box">
                     <div class="product__img-box">
-                        <img class="img__main " src="img/products/PG.10216885.JJ169XX.BZ.jpg" alt="Archi Desk Accessories Pen Cup">
+                        <img class="img__main" src="img/products/PG.10216885.JJ169XX.BZ.jpg" alt="Archi Desk Accessories Pen Cup">
+                        <span class="img__expand"><i class="fas fa-expand-arrows-alt"></i></span>
                     </div>
                     <div class="product__images">
                         <div class="img__box">
@@ -200,9 +202,10 @@
                     <div class="product__content">
                         <span class="product__price">$299.99</span>
                         <div class="settings-group">
-                            <select class="form-control product__control" id="size">
-                                <option>Dark Gray</option>
-                            </select>
+                            <div class="form-control product__control color-select" id="size">
+                                <div class="color grey"></div>
+                                <span>Dark Gray</span>
+                            </div>
                         </div>
                         <div class="product__buttons-group">
                             <div class="product__control amount">
@@ -239,9 +242,9 @@
                         
                         Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. </p>
                 </div>
-                <div class="popular__title wrapper_outer wrapper_inner">
-                    <h3 class="popular__headding wrapper_inner"><span>Popular items</span></h3>
-                </div>
+                <div class="popular__title ">
+                    <h3 class="popular__heading"><span>Popular items</span></h3>
+                 </div>
                 <div class="popular__list">
                     <div class="card">
                         <div class="card__content">
@@ -305,7 +308,7 @@
                     </div>                    
                 </div>
             </div>
-            <button type="button" class="btn btn-outline-primary btn__scroll">Scroll to top</button>
+            <button type="button" class="btn btn-outline-primary btn__scroll btn__main">Scroll to top</button>
             <div class="benefits wrapper_inner">
                 <div class="benefits__item">
                     <div class="benefits__img">
