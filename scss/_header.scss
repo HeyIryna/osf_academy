@@ -5,7 +5,7 @@
   display: flex;
   width: 1280px;
   background-color: white;
-  z-index: 1;
+  z-index: 10;
   align-items: center;
   justify-content: space-between;
   height: 80px;
@@ -179,6 +179,7 @@
 
     &__item {
       @include icon(1.4rem);
+      position: relative;
     }
   }
 }
@@ -189,6 +190,15 @@
 
 .settings .dropdown-toggle::after {
   margin-left: 15px;
+}
+
+.added__container_header {
+  @include added__container(white);
+}
+
+.cart__container,
+.wishlist__container {
+  display: none;
 }
 
 @media (max-width: 769px) {

@@ -70,6 +70,16 @@
   display: none;
 }
 
+.mail-to,
+.call-to {
+  text-decoration: none;
+  color: $text-main;
+
+  &:hover {
+    color: $primary;
+  }
+}
+
 @media (max-width: 1279px) {
   .footer {
     grid-template-columns: 27% 1fr 5%;
@@ -161,5 +171,14 @@
 
   .categories__item {
     padding-left: 10px;
+  }
+
+  .operations__item {
+    position: relative;
+  }
+
+  .added__container_footer {
+    @include added__container($background-main);
+    right: -7px;
   }
 }

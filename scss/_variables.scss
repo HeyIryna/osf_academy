@@ -44,4 +44,26 @@ $not-bound-background: #f1edea;
   &:hover {
     color: darken($icon-color, 20%);
   }
+
+  &:visited {
+    color: $icon-color;
+  }
+}
+
+@mixin added__container($color) {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  border: 2px solid $primary;
+  background-color: $color;
+  color: $primary;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 5px;
 }

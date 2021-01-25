@@ -55,6 +55,9 @@ body {
   color: #e8e2d6;
   border-color: #e8e2d6;
   opacity: 0.5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .btn__more:hover, .btn__load:hover {
   background-color: #e8e2d6;
@@ -175,6 +178,11 @@ body {
   margin: 0 15px 0 15px;
   letter-spacing: -1px;
   line-height: 1.2rem;
+  color: #45413e;
+  text-decoration: none;
+}
+.card__title:hover {
+  color: #85bc23;
 }
 .card__price {
   font-size: 0.875;
@@ -238,7 +246,8 @@ body {
   color: #67911b;
 }
 
-.fa-caret-down {
+.fa-caret-down,
+.fa-caret-up {
   padding-left: 15px;
 }
 
@@ -300,7 +309,7 @@ body {
   display: flex;
   width: 1280px;
   background-color: white;
-  z-index: 1;
+  z-index: 10;
   align-items: center;
   justify-content: space-between;
   height: 80px;
@@ -462,9 +471,13 @@ body {
   padding: 0 15px 10px 15px;
   color: #b2b2b2;
   font-size: 1.4rem;
+  position: relative;
 }
 .menu .operations__item:hover {
   color: #7f7f7f;
+}
+.menu .operations__item:visited {
+  color: #b2b2b2;
 }
 
 .navigation .dropdown-toggle::after {
@@ -473,6 +486,29 @@ body {
 
 .settings .dropdown-toggle::after {
   margin-left: 15px;
+}
+
+.added__container_header {
+  border-radius: 50%;
+  width: 18px;
+  height: 18px;
+  border: 2px solid #85bc23;
+  background-color: white;
+  color: #85bc23;
+  font-size: 0.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 5px;
+}
+
+.cart__container,
+.wishlist__container {
+  display: none;
 }
 
 @media (max-width: 769px) {
@@ -633,6 +669,9 @@ body {
 .footer__icon:hover {
   color: #7f7f7f;
 }
+.footer__icon:visited {
+  color: #b2b2b2;
+}
 .footer__icon:hover {
   color: #b2b2b2;
 }
@@ -665,6 +704,16 @@ body {
 
 .operations_mobile {
   display: none;
+}
+
+.mail-to,
+.call-to {
+  text-decoration: none;
+  color: #45413e;
+}
+.mail-to:hover,
+.call-to:hover {
+  color: #85bc23;
 }
 
 @media (max-width: 1279px) {
@@ -743,6 +792,29 @@ body {
 
   .categories__item {
     padding-left: 10px;
+  }
+
+  .operations__item {
+    position: relative;
+  }
+
+  .added__container_footer {
+    border-radius: 50%;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #85bc23;
+    background-color: #262a32;
+    color: #85bc23;
+    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 5px;
+    right: -7px;
   }
 }
 .signin__content {
@@ -1075,6 +1147,11 @@ body {
 .amount__button:hover {
   color: #666666;
   cursor: pointer;
+}
+.amount__number {
+  width: 30px;
+  border: none;
+  text-align: center;
 }
 
 .btn__main {

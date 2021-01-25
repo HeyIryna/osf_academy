@@ -68,6 +68,9 @@ body {
     color: #e8e2d6;
     border-color: #e8e2d6;
     opacity: 0.5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     &:hover {
       background-color: #e8e2d6;
@@ -210,6 +213,12 @@ body {
     margin: 0 15px 0 15px;
     letter-spacing: -1px;
     line-height: 1.2rem;
+    color: $text-main;
+    text-decoration: none;
+
+    &:hover {
+      color: $primary;
+    }
   }
 
   &__price {
@@ -291,7 +300,8 @@ body {
   }
 }
 
-.fa-caret-down {
+.fa-caret-down,
+.fa-caret-up {
   padding-left: 15px;
 }
 

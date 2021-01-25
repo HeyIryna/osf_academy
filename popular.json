@@ -1,0 +1,22 @@
+[
+    {
+        "name" : "Kristina Dam Oak Table With White Marble Top",
+        "price" : 799.55,
+        "image" : "./img/main/popular-1.jpg"
+    },
+    {
+        "name" : "Hay - About A Lounge<br>Chair AAL 93",
+        "price" : 659.55,
+        "image" : "./img/main/popular-2.jpg"
+    },
+    {
+        "name" : "Activate Facial Mask and<br>Charcoal Soap",
+        "price" : 129.55,
+        "image" : "./img/main/popular-3.jpg"
+    },
+    {
+        "name" : "Cocktail Table Walnut | YES",
+        "price" : 299.99,
+        "image" : "./img/main/popular-4.jpg"
+    }
+]
