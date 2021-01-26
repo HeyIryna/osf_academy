@@ -29,17 +29,18 @@ $(document).ready(function () {
       .html(sessionStorage.getItem('wishlist').split(',').length);
   }
 
-  if(!sessionStorage.getItem("cookies")) {
+  if (!sessionStorage.getItem('cookies')) {
     window.setTimeout(function () {
-      $("#cookies__modal").modal("show");
-    }, 2000);
+      $('#cookies__modal').modal('show');
+    }, 10000);
   }
 });
 
 // Adds cookies flag lo session storage
 $('#cookies__accept').on('click', () => {
-  sessionStorage.setItem("cookies", "true");
-})
+  sessionStorage.setItem('cookies', 'true');
+  $('#cookies__modal').modal('hide');
+});
 
 // Toggles up-/down-arrows on header and footer menu when sub-menus are opened /closed
 $('[data-toggle="collapse"]').on('click', function (event) {
@@ -88,3 +89,30 @@ function addToWishlist() {
     .html(sessionStorage.getItem('wishlist').split(',').length);
 }
 
+// AJAX request for load more products
+
+$('#load__more_homepage').on('click', function () {
+  let xhr = new XMLHttpRequest();
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === 4 && xhr.status === 200) {
+      let uploadedProducts = JSON.parse(xhr.responseText);
+      uploadedProducts.forEach((product) => {
+        let newCard = `<div class="card">
+        <div class="card__content">
+            <a href="product_page.html"><img class="card__img" src="${product.image}" alt="${product.name}"></a>
+            <div class="card__text">
+                <a href="product_page.html" class="card__title">${product.name}</a>
+                <div class="btn__split">
+                    <a href="product_page.html" class="btn btn__split_left">${product.price}</a>
+                    <button type="button" class="btn btn__split_right buy">Buy now</button>   
+                </div>                        
+            </div>                            
+        </div>
+    </div>`;
+        $('.popular__list').append(newCard);
+      });
+    }
+  };
+  xhr.open('GET', './popular.json');
+  xhr.send();
+});
