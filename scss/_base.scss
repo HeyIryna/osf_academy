@@ -94,6 +94,11 @@ body {
       border-color: darken($primary, 10%);
       background-color: darken($primary, 10%);
     }
+
+    &:focus {
+      border-color: $primary;
+      background-color: $primary;
+    }
   }
 
   &__social {

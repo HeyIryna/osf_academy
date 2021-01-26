@@ -28,7 +28,18 @@ $(document).ready(function () {
       .css('display', 'flex')
       .html(sessionStorage.getItem('wishlist').split(',').length);
   }
+
+  if(!sessionStorage.getItem("cookies")) {
+    window.setTimeout(function () {
+      $("#cookies__modal").modal("show");
+    }, 2000);
+  }
 });
+
+// Adds cookies flag lo session storage
+$('#cookies__accept').on('click', () => {
+  sessionStorage.setItem("cookies", "true");
+})
 
 // Toggles up-/down-arrows on header and footer menu when sub-menus are opened /closed
 $('[data-toggle="collapse"]').on('click', function (event) {
@@ -38,10 +49,7 @@ $('[data-toggle="collapse"]').on('click', function (event) {
 // Adds current year to footer
 $('.current-year').text(new Date().getFullYear());
 
-//-----------------------
-
 // "Buy button" and "plus button" increase the number for cart element
-
 $('button.buy').on('click', addToCart);
 $('.overlay__button_plus').on('click', addToCart);
 

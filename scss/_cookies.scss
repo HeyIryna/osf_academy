@@ -1,0 +1,37 @@
+.cookies {
+  &__modal {
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+  }
+
+  &__heading {
+    color: $primary;
+    font-size: 1rem;
+    font-weight: 600;
+  }
+
+  &__column {
+    &_left {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 75%;
+
+      p {
+        margin: 0;
+        line-height: 24px;
+        font-size: 0.875rem;
+      }
+    }
+
+    &_right {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-end;
+      width: 20%;
+    }
+  }
+}

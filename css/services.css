@@ -79,6 +79,10 @@ body {
   border-color: #67911b;
   background-color: #67911b;
 }
+.btn__main:focus {
+  border-color: #85bc23;
+  background-color: #85bc23;
+}
 .btn__social {
   color: #3b5b96;
   border-color: #3b5b96;
@@ -847,6 +851,36 @@ body {
   width: 405px;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.cookies__modal {
+  display: flex;
+  justify-content: space-between;
+  padding: 25px;
+}
+.cookies__heading {
+  color: #85bc23;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.cookies__column_left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 75%;
+}
+.cookies__column_left p {
+  margin: 0;
+  line-height: 24px;
+  font-size: 0.875rem;
+}
+.cookies__column_right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 20%;
 }
 
 .breadcrumb {

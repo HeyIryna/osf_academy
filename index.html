@@ -573,20 +573,21 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
         </div>
 
         <!-- Cookies modal -->
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#cookies__modal">
-            Launch demo modal
-          </button>
-
-        <div class="modal fade" id="cookies__modal">
-            <div class="modal-dialog modal-dialog-centered">
+        <div class="modal fade bd-example-modal-xl" id="cookies__modal" >
+            <div class="modal-dialog modal-xl">
               <div class="modal-content">
-
-                  <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                  </button>
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                  <button type="button" class="btn btn-primary">Save changes</button>
+                  <div class="cookies__modal">
+                    <div class="cookies__column_left">
+                        <h5 class="cookies__heading">This website uses cookies</h5>
+                        <p>OSF uses its own and third-party cookies for statistical purposes, to know your preferences, for website performance 
+                            and interaction with social media offering publicity tailored to your interests. If you continue browsing, we consider that you accept its use. 
+                            You can expand this information consulting our <a class="link" href="">Cookies Policy Page</a>.</p>
+                    </div>
+                    <div class="cookies__column_right">
+                        <span type="button" data-dismiss="modal" aria-label="Close"><i class="fas fa-times"></i></span>
+                        <button id="cookies__accept" type="button" class="btn btn-primary btn__main">ACCEPT</button>                      
+                    </div>                      
+                  </div>
 
               </div>
             </div>
