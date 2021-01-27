@@ -220,6 +220,14 @@
     padding-top: 65px;
     padding-bottom: 65px;
   }
+
+  &__info-item {
+    display: none;
+
+    &.active {
+      display: block;
+    }
+  }
 }
 
 .popular__heading {
