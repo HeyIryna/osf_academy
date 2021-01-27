@@ -17,6 +17,16 @@ $(document).ready(function () {
     ],
   });
 
+  $('.featured__list').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    autoplay: true,
+    autoplaySpeed: 5000,
+    prevArrow: $('.prev'),
+    nextArrow: $('.next'),
+  });
+
   if (sessionStorage.getItem('cart')) {
     $('.cart__container')
       .css('display', 'flex')
@@ -96,21 +106,25 @@ $('#load__more_homepage').on('click', function () {
   xhr.onreadystatechange = function () {
     if (xhr.readyState === 4 && xhr.status === 200) {
       let uploadedProducts = JSON.parse(xhr.responseText);
-      uploadedProducts.forEach((product) => {
+
+      for (let i = 0; i < 4; i++) {
         let newCard = `<div class="card">
-        <div class="card__content">
-            <a href="product_page.html"><img class="card__img" src="${product.image}" alt="${product.name}"></a>
-            <div class="card__text">
-                <a href="product_page.html" class="card__title">${product.name}</a>
-                <div class="btn__split">
-                    <a href="product_page.html" class="btn btn__split_left">${product.price}</a>
-                    <button type="button" class="btn btn__split_right buy">Buy now</button>   
-                </div>                        
-            </div>                            
+    <div class="card__content">
+        <img class="card__img" src="${uploadedProducts[i].image}" alt="${uploadedProducts[i].name}">
+        <div class="card__text">
+            <p class="card__title">${uploadedProducts[i].name}</p>
+            <span class="card__price">${uploadedProducts[i].price}</span>                           
+        </div>                            
+    </div>
+    <div class="card__overlay">
+        <div class="overlay__buttons-group">
+            <div class="overlay__button overlay__button_plus"><i class="fas fa-plus"></i></div>
+            <div class="overlay__button overlay__button_heart"><i class="fas fa-heart"></i></div>                    
         </div>
-    </div>`;
+    </div>
+</div>`;
         $('.popular__list').append(newCard);
-      });
+      }
     }
   };
   xhr.open('GET', './popular.json');

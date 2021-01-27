@@ -1047,6 +1047,36 @@ body {
   font-size: 1.5rem;
 }
 
+.slick-list {
+  margin: 0 -30px;
+}
+
+.slick-slide {
+  margin: 0 20px;
+}
+
+.paginator {
+  position: relative;
+  float: right;
+  margin-bottom: 20px;
+}
+.paginator li {
+  margin-top: 20px;
+  position: relative;
+  float: left;
+  margin-right: 20px;
+}
+
+.fas {
+  padding: 10px;
+  font-size: 0.7rem;
+  background-color: #2d3538;
+}
+.fas:hover {
+  cursor: pointer;
+  background-color: #384246;
+}
+
 @media (max-width: 1279px) {
   .featured {
     display: none;
