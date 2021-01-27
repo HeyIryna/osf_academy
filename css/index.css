@@ -1196,12 +1196,12 @@ body {
   margin-right: 20px;
 }
 
-.fas {
-  padding: 10px;
+.prev, .next {
+  padding: 5px 10px;
   font-size: 0.7rem;
   background-color: #2d3538;
 }
-.fas:hover {
+.prev:hover, .next:hover {
   cursor: pointer;
   background-color: #384246;
 }
