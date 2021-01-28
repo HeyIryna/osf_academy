@@ -3,12 +3,14 @@ $(document).ready(function () {
     dots: true,
     infinite: true,
     arrows: false,
+    focusOnSelect: false
   });
 
   $('.popular__list').slick({
     dots: true,
     arrows: false,
     mobileFirst: true,
+    focusOnSelect: false,
     responsive: [
       {
         breakpoint: 767,
@@ -23,6 +25,7 @@ $(document).ready(function () {
     slidesToScroll: 4,
     autoplay: true,
     autoplaySpeed: 5000,
+    focusOnSelect: false,
     prevArrow: $('.prev'),
     nextArrow: $('.next'),
   });

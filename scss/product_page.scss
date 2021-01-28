@@ -6,6 +6,7 @@
 @import 'breadcrumb';
 @import 'popular';
 @import 'benefits';
+@import 'slider-dots';
 
 @import 'variables';
 
@@ -131,6 +132,10 @@
     top: 20px;
     left: 25px;
     font-size: 1.5rem;
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 
   &__overlay {
