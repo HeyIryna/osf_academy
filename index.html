@@ -586,15 +586,17 @@ doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veri
                 <h2 class="signin__heading">Sign in</h2>
                 <div class="form-group">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="email" required  class="form-control signin__control" id="exampleInputEmail1">
+                    <input type="email" required  class="form-control signin__control">
                 </div>
                 <div class="form-group">
                 <div class ="password-group">
                     <label for="exampleInputPassword1">Lato</label>
                     <span class="signin__notification">forgot password</span>                          
                 </div>
-
-                <input type="password" class="form-control signin__control" id="exampleInputPassword1">
+                <div class ="password__field">
+                    <input type="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_=+-]).{6,}" class="form-control signin__control password__input">
+                    <i class="fas fa-eye-slash password__icon"></i>                    
+                </div>
                 </div>
                 <button type="submit" class="btn btn__main">login</button>  
                 <span class="signin__notification">I don’t have an account</span> 

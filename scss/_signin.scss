@@ -1,3 +1,5 @@
+
+
 .signin {
   &__content {
     width: 500px;
@@ -32,4 +34,19 @@
   width: 405px;
   justify-content: space-between;
   align-items: flex-end;
+}
+
+.password__field {
+  position: relative;
+}
+
+.password__icon {
+  color: $icon-color;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+
+  &:hover {
+    cursor: pointer;
+  }
 }

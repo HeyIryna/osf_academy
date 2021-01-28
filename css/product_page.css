@@ -852,6 +852,20 @@ body {
   align-items: flex-end;
 }
 
+.password__field {
+  position: relative;
+}
+
+.password__icon {
+  color: #b2b2b2;
+  position: absolute;
+  top: 10px;
+  right: 15px;
+}
+.password__icon:hover {
+  cursor: pointer;
+}
+
 .cookies__modal {
   display: flex;
   justify-content: space-between;

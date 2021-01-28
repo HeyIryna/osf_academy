@@ -130,3 +130,10 @@ $('#load__more_homepage').on('click', function () {
   xhr.open('GET', './popular.json');
   xhr.send();
 });
+
+// show / hide password
+$('.password__icon').on('click', function() {  
+    let passwordAttr = $('.password__input').attr('type') === 'password' ? 'text' : 'password';
+    $('.password__input').attr('type', passwordAttr);
+    $( this ).toggleClass("fa-eye fa-eye-slash");
+});
