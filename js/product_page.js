@@ -1,18 +1,18 @@
 $(document).ready(function () {
-  // $('.product__images').slick({
-  //   dots: true,
-  //   infinite: true,
-  //   mobileFirst: true,
-  //   arrows: false,
-  //   infinite: true,
-  //   slidesToShow: 3,
-  //   responsive: [
-  //     {
-  //       breakpoint: 767,
-  //       settings: 'unslick',
-  //     },
-  //   ],
-  // });
+  $('.product__images').slick({
+    dots: true,
+    infinite: true,
+    mobileFirst: true,
+    arrows: false,
+    infinite: true,
+    slidesToShow: 3,
+    responsive: [
+      {
+        breakpoint: 767,
+        settings: 'unslick',
+      },
+    ],
+  });
 
   $('.popular__list').slick({
     dots: true,
@@ -25,7 +25,8 @@ $(document).ready(function () {
       },
     ],
   });
-  //////////////////////////
+
+  // double slider for product images
 
   $('.slider-main').slick({
     slidesToShow: 1,
@@ -51,10 +52,11 @@ $(document).ready(function () {
           dots: true,
           arrows: false,
         },
-      }
+      },
     ],
   });
 
+  // uploads data to cart and wishlist icons from session storage
 
   if (sessionStorage.getItem('cart')) {
     $('.cart__container')
@@ -67,6 +69,15 @@ $(document).ready(function () {
       .css('display', 'flex')
       .html(sessionStorage.getItem('wishlist').split(',').length);
   }
+
+  // hides text from description that is over 100 symbols, and shows it on clicking "Read more"
+  let moreDescription = $('.product__text').text().slice(100);
+  $('.product__text').text($('.product__text').text().slice(0, 100));
+
+  $('.product__more').on('click', () => {
+    $('.product__text').text($('.product__text').text() + moreDescription);
+    $('.product__more').hide();
+  });
 });
 
 // Product tabs toggle
@@ -117,4 +128,26 @@ function addToWishlist() {
     .html(sessionStorage.getItem('wishlist').split(',').length);
 }
 
+// "Change amount button" increases or decreases number of products user wants to buy
+$('.amount__button.plus').on('click', function () {
+  $('.amount__number').val(+$('.amount__number').val() + 1);
+});
 
+$('.amount__button.minus').on('click', function () {
+  if (+$('.amount__number').val() > 1) {
+    $('.amount__number').val(+$('.amount__number').val() - 1);
+  }
+});
+
+// "Add to cart button" increase the number for cart element
+$('.btn__add').on('click', addToCartDifferentAmount);
+
+function addToCartDifferentAmount() {
+  if (/^[1-9][0-9]*$/.test($('.amount__number').val().trim())) {
+    for (let i = 0; i < +$('.amount__number').val().trim(); i++) {
+      addToCart();
+    }
+  } else {
+    alert('Please, enter number');
+  }
+}

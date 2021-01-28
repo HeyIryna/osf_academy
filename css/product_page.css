@@ -1101,6 +1101,10 @@ body {
 .product__more {
   color: #85bc23;
 }
+.product__more:hover {
+  cursor: pointer;
+  color: #67911b;
+}
 .product__share {
   display: flex;
   margin-top: 25px;
@@ -1196,6 +1200,9 @@ body {
   border: none;
   text-align: center;
 }
+.amount__number:focus {
+  outline: none;
+}
 
 .btn__main {
   width: 150px;
@@ -1267,6 +1274,10 @@ body {
   background: red;
   margin-right: 30px;
   overflow: hidden;
+}
+
+.read-more__text {
+  display: none;
 }
 
 @media (max-width: 769px) {

@@ -83,6 +83,11 @@
 
   &__more {
     color: $primary;
+
+    &:hover {
+      cursor: pointer;
+      color: darken($primary, 10%);
+    }
   }
 
   &__share {
@@ -193,6 +198,10 @@
     width: 30px;
     border: none;
     text-align: center;
+
+    &:focus {
+      outline: none;
+    }
   }
 }
 
@@ -274,6 +283,10 @@
   background: red;
   margin-right: 30px;
   overflow: hidden;
+}
+
+.read-more__text {
+  display: none;
 }
 
 @media (max-width: 769px) {
