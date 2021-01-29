@@ -3,7 +3,7 @@ $(document).ready(function () {
     dots: true,
     infinite: true,
     arrows: false,
-    focusOnSelect: false
+    focusOnSelect: false,
   });
 
   $('.popular__list').slick({
@@ -31,15 +31,11 @@ $(document).ready(function () {
   });
 
   if (sessionStorage.getItem('cart')) {
-    $('.cart__container')
-      .css('display', 'flex')
-      .html(sessionStorage.getItem('cart').split(',').length);
+    fillListIcon('cart', '.cart__container');
   }
 
   if (sessionStorage.getItem('wishlist')) {
-    $('.wishlist__container')
-      .css('display', 'flex')
-      .html(sessionStorage.getItem('wishlist').split(',').length);
+    fillListIcon('wishlist', '.wishlist__container');
   }
 
   if (!sessionStorage.getItem('cookies')) {
@@ -47,6 +43,31 @@ $(document).ready(function () {
       $('#cookies__modal').modal('show');
     }, 10000);
   }
+});
+
+// hides mobile and desktop dropped menus on window resize
+$(window).resize(function () {
+  if ($(window).width() <= 769) {
+    if ($('.header__dropdown_desktop').hasClass('show')) {
+      $('.header__dropdown_desktop').toggleClass('show hide');
+    }
+  } else {
+    if ($('.header__dropdown_mobile').hasClass('show')) {
+      $('.header__dropdown_mobile').toggleClass('show hide');
+    }
+  }
+});
+
+// show / hide desktop header dropdown menu on click
+$('.header__toggle').on('click', function () {
+  $('.header__dropdown_desktop').toggleClass('show hide');
+  $(this).toggleClass('active');
+});
+
+// show / hide mobile header dropdown menu on click
+$('.menu__icon').on('click', function () {
+  $('.menu__icon').toggleClass('fa-bars fa-times');
+  $('.header__dropdown_mobile').toggleClass('show hide');
 });
 
 // Adds cookies flag lo session storage
@@ -68,42 +89,59 @@ $('button.buy').on('click', addToCart);
 $('.overlay__button_plus').on('click', addToCart);
 
 function addToCart() {
-  let product = { name: 'name' };
-
-  if (!sessionStorage.getItem('cart')) {
-    sessionStorage.setItem('cart', JSON.stringify(product));
-  } else {
-    sessionStorage.setItem(
-      'cart',
-      sessionStorage.getItem('cart') + ',' + JSON.stringify(product)
-    );
-  }
-  $('.cart__container')
-    .css('display', 'flex')
-    .html(sessionStorage.getItem('cart').split(',').length);
+  addToStorage(this, 'cart');
+  fillListIcon('cart', '.cart__container');
 }
 
 // "Add to wishlist" button increases the number for cart element
 $('.overlay__button_heart').on('click', addToWishlist);
 
 function addToWishlist() {
-  let product = { name: 'name' };
+  addToStorage(this, 'wishlist');
+  fillListIcon('wishlist', '.wishlist__container');
+}
 
-  if (!sessionStorage.getItem('wishlist')) {
-    sessionStorage.setItem('wishlist', JSON.stringify(product));
+function addToStorage(element, storageName) {
+  let card = $(element).closest('.card');
+
+  let product = {
+    name: card.find('.card__title').text(),
+    img: card.find('.card__img').attr('src'),
+    price: card.find('.price').text(),
+    number: 1,
+  };
+
+  let cart = [];
+  if (sessionStorage.getItem(storageName)) {
+    cart = JSON.parse(sessionStorage.getItem(storageName));
+
+    if (cart.find((el) => el.name === product.name)) {
+      for (let i = 0; i < cart.length; i++) {
+        if (cart[i].name === product.name) {
+          cart[i].number += 1;
+          sessionStorage.setItem(storageName, JSON.stringify(cart));
+          break;
+        }
+      }
+    } else {
+      cart.push(product);
+      sessionStorage.setItem(storageName, JSON.stringify(cart));
+    }
   } else {
-    sessionStorage.setItem(
-      'wishlist',
-      sessionStorage.getItem('wishlist') + ',' + JSON.stringify(product)
-    );
+    cart.push(product);
+    sessionStorage.setItem(storageName, JSON.stringify(cart));
   }
-  $('.wishlist__container')
-    .css('display', 'flex')
-    .html(sessionStorage.getItem('wishlist').split(',').length);
+}
+
+function fillListIcon(storageName, className) {
+  let cartContent = JSON.parse(sessionStorage.getItem(storageName));
+  let cartAmount = cartContent.reduce((acc, el) => {
+    return acc + el.number;
+  }, 0);
+  $(className).css('display', 'flex').html(cartAmount);
 }
 
 // AJAX request for load more products
-
 $('#load__more_homepage').on('click', function () {
   let xhr = new XMLHttpRequest();
   xhr.onreadystatechange = function () {
@@ -135,8 +173,9 @@ $('#load__more_homepage').on('click', function () {
 });
 
 // show / hide password
-$('.password__icon').on('click', function() {  
-    let passwordAttr = $('.password__input').attr('type') === 'password' ? 'text' : 'password';
-    $('.password__input').attr('type', passwordAttr);
-    $( this ).toggleClass("fa-eye fa-eye-slash");
+$('.password__icon').on('click', function () {
+  let passwordAttr =
+    $('.password__input').attr('type') === 'password' ? 'text' : 'password';
+  $('.password__input').attr('type', passwordAttr);
+  $(this).toggleClass('fa-eye fa-eye-slash');
 });

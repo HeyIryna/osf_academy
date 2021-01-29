@@ -152,7 +152,7 @@ function addToCartDifferentAmount() {
   }
 }
 
-// 'zoom button' opens the full-page preview for main product image
+// 'zoom button' opes the full-page preview for main product image
 $('.img__expand').on('click', function () {
   $('.slick-current > .img__main').addClass('img-enlargeable');
   let src = $('.slick-current > .img__main').attr('src');

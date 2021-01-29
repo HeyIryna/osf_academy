@@ -44,6 +44,13 @@
       padding-bottom: 15px;
     }
   }
+
+  .slick-list {
+    margin: 0 -30px;
+  }
+  .slick-slide {
+    margin: 0 20px;
+  }
 }
 
 .pagination {
@@ -73,12 +80,7 @@
   font-size: 1.5rem;
 }
 
-.slick-list {
-  margin: 0 -30px;
-}
-.slick-slide {
-  margin: 0 20px;
-}
+
 
 // .slick-arrow {
 //   background-color: #2d3538;

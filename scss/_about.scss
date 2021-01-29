@@ -144,6 +144,10 @@
     &__aside {
       width: 25%;
     }
+
+    .slick-dots {
+      bottom: 5px;
+  }
   }
 
   .sale {
@@ -166,6 +170,8 @@
       font-size: 2.5rem;
     }
   }
+
+
 }
 
 @media (max-width: 769px) {
