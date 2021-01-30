@@ -89,7 +89,8 @@ $('button.buy').on('click', addToCart);
 $('.overlay__button_plus').on('click', addToCart);
 
 function addToCart() {
-  addToStorage(this, 'cart');
+  let product = fillProductFromCard(this);
+  addToStorage('cart', product);
   fillListIcon('cart', '.cart__container');
 }
 
@@ -97,20 +98,12 @@ function addToCart() {
 $('.overlay__button_heart').on('click', addToWishlist);
 
 function addToWishlist() {
-  addToStorage(this, 'wishlist');
+  let product = fillProductFromCard(this);
+  addToStorage('wishlist', product);
   fillListIcon('wishlist', '.wishlist__container');
 }
 
-function addToStorage(element, storageName) {
-  let card = $(element).closest('.card');
-
-  let product = {
-    name: card.find('.card__title').text(),
-    img: card.find('.card__img').attr('src'),
-    price: card.find('.price').text(),
-    number: 1,
-  };
-
+function addToStorage(storageName, product) {
   let cart = [];
   if (sessionStorage.getItem(storageName)) {
     cart = JSON.parse(sessionStorage.getItem(storageName));
@@ -118,7 +111,7 @@ function addToStorage(element, storageName) {
     if (cart.find((el) => el.name === product.name)) {
       for (let i = 0; i < cart.length; i++) {
         if (cart[i].name === product.name) {
-          cart[i].number += 1;
+          cart[i].number += product.number;
           sessionStorage.setItem(storageName, JSON.stringify(cart));
           break;
         }
@@ -131,6 +124,18 @@ function addToStorage(element, storageName) {
     cart.push(product);
     sessionStorage.setItem(storageName, JSON.stringify(cart));
   }
+}
+
+function fillProductFromCard(element) {
+  let card = $(element).closest('.card');
+
+  let product = {
+    name: card.find('.card__title').text(),
+    img: card.find('.card__img').attr('src'),
+    price: card.find('.price').text(),
+    number: 1,
+  };
+  return product;
 }
 
 function fillListIcon(storageName, className) {

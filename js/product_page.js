@@ -57,17 +57,12 @@ $(document).ready(function () {
   });
 
   // uploads data to cart and wishlist icons from session storage
-
   if (sessionStorage.getItem('cart')) {
-    $('.cart__container')
-      .css('display', 'flex')
-      .html(sessionStorage.getItem('cart').split(',').length);
+    fillListIcon('cart', '.cart__container');
   }
 
   if (sessionStorage.getItem('wishlist')) {
-    $('.wishlist__container')
-      .css('display', 'flex')
-      .html(sessionStorage.getItem('wishlist').split(',').length);
+    fillListIcon('wishlist', '.wishlist__container');
   }
 
   // hides text from description that is over 100 symbols, and shows it on clicking "Read more"
@@ -89,67 +84,96 @@ $('.tabs__item').click(function () {
   content.toggleClass('active').siblings().removeClass('active');
 });
 
-// "Buy button" and "plus button" increase the number for cart element
+//"Buy button" and "plus button" increase the number for cart element
 $('button.buy').on('click', addToCart);
 $('.overlay__button_plus').on('click', addToCart);
 
 function addToCart() {
-  let product = { name: 'name' };
-
-  if (!sessionStorage.getItem('cart')) {
-    sessionStorage.setItem('cart', JSON.stringify(product));
-  } else {
-    sessionStorage.setItem(
-      'cart',
-      sessionStorage.getItem('cart') + ',' + JSON.stringify(product)
-    );
-  }
-  $('.cart__container')
-    .css('display', 'flex')
-    .html(sessionStorage.getItem('cart').split(',').length);
+  let product = fillProductFromCard(this);
+  addToStorage('cart', product);
+  fillListIcon('cart', '.cart__container');
 }
 
 // "Add to wishlist" button increases the number for cart element
 $('.overlay__button_heart').on('click', addToWishlist);
 
 function addToWishlist() {
-  let product = { name: 'name' };
-
-  if (!sessionStorage.getItem('wishlist')) {
-    sessionStorage.setItem('wishlist', JSON.stringify(product));
-  } else {
-    sessionStorage.setItem(
-      'wishlist',
-      sessionStorage.getItem('wishlist') + ',' + JSON.stringify(product)
-    );
-  }
-  $('.wishlist__container')
-    .css('display', 'flex')
-    .html(sessionStorage.getItem('wishlist').split(',').length);
+  let product = fillProductFromCard(this);
+  addToStorage('wishlist', product);
+  fillListIcon('wishlist', '.wishlist__container');
 }
 
-// "Change amount button" increases or decreases number of products user wants to buy
-$('.amount__button.plus').on('click', function () {
-  $('.amount__number').val(+$('.amount__number').val() + 1);
-});
+function addToStorage(storageName, product) {
+  let cart = [];
+  if (sessionStorage.getItem(storageName)) {
+    cart = JSON.parse(sessionStorage.getItem(storageName));
 
-$('.amount__button.minus').on('click', function () {
-  if (+$('.amount__number').val() > 1) {
-    $('.amount__number').val(+$('.amount__number').val() - 1);
+    if (cart.find((el) => el.name === product.name)) {
+      for (let i = 0; i < cart.length; i++) {
+        if (cart[i].name === product.name) {
+          cart[i].number += product.number;
+          sessionStorage.setItem(storageName, JSON.stringify(cart));
+          break;
+        }
+      }
+    } else {
+      cart.push(product);
+      sessionStorage.setItem(storageName, JSON.stringify(cart));
+    }
+  } else {
+    cart.push(product);
+    sessionStorage.setItem(storageName, JSON.stringify(cart));
   }
-});
+}
+
+function fillProductFromCard(element) {
+  let card = $(element).closest('.card');
+
+  let product = {
+    name: card.find('.card__title').text(),
+    img: card.find('.card__img').attr('src'),
+    price: card.find('.price').text(),
+    number: 1,
+  };
+  return product;
+}
+
+function fillListIcon(storageName, className) {
+  let cartContent = JSON.parse(sessionStorage.getItem(storageName));
+  let cartAmount = cartContent.reduce((acc, el) => {
+    return acc + el.number;
+  }, 0);
+  $(className).css('display', 'flex').html(cartAmount);
+}
 
 // "Add to cart button" increase the number for cart element
 $('.btn__add').on('click', addToCartDifferentAmount);
 
 function addToCartDifferentAmount() {
+  if (validAmount()) {
+    let product = fillProductFromProductPage();
+    addToStorage('cart', product);
+    fillListIcon('cart', '.cart__container');
+  }
+}
+
+let validAmount = () => {
   if (/^[1-9][0-9]*$/.test($('.amount__number').val().trim())) {
-    for (let i = 0; i < +$('.amount__number').val().trim(); i++) {
-      addToCart();
-    }
+    return true;
   } else {
     alert('Please, enter number');
+    return false;
   }
+};
+
+function fillProductFromProductPage() {
+  let product = {
+    name: $('.product__title').text().trim(),
+    img: $('.img__main').attr('src'),
+    price: $('.product__price').text(),
+    number: +$('.amount__number').val().trim(),
+  };
+  return product;
 }
 
 // 'zoom button' opes the full-page preview for main product image
