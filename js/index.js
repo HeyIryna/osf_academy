@@ -132,7 +132,7 @@ function fillProductFromCard(element) {
   let product = {
     name: card.find('.card__title').text(),
     img: card.find('.card__img').attr('src'),
-    price: card.find('.price').text(),
+    price: card.find('.price').text().replace( /^\D+/g, ''),
     number: 1,
   };
   return product;

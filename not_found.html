@@ -22,158 +22,160 @@
     <div class="wrapper_outer">
       <header class="header-desktop wrapper_inner">
         <a class="logo" href="./index.html">
-          <img class="logo__img" src="./img/header/osf-logo.png" alt="OSF Logo">               
-          <div class="logo__name">
-              <span class="logo__name_main">OSF</span>
-              <span class="logo__name_secondary">Academy</span>
-          </div>            
+            <img class="logo__img" src="./img/header/osf-logo.png" alt="OSF Logo">               
+            <div class="logo__name">
+                <span class="logo__name_main">OSF</span>
+                <span class="logo__name_secondary">Academy</span>
+            </div>            
         </a>
         <div class="menu">
-            <nav class="menu__navigation">
-                <ul class="navigation ">
-                    <li class="navigation__item header__item dropdown dropdown-toggle" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Services
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <div class="services wrapper_outer dropdown-menu-right">
-                                <div>
-                                    <h6 class="dropdown-header">PRODUCT CATEGORIES</h6>
-                                    <div class="categories">
-                                        <div>
-                                            <a class="dropdown-item" href="#">Accessories</a>
-                                            <a class="dropdown-item" href="#">Alcohol</a>
-                                            <a class="dropdown-item" href="#">Art</a>
-                                            <a class="dropdown-item" href="#">Books</a>
-                                            <a class="dropdown-item" href="#">Drink</a>
-                                            <a class="dropdown-item" href="#">Electronics</a>
-                                            <a class="dropdown-item" href="#">Flowers & Plants</a>
-                                            <a class="dropdown-item" href="#">Food</a>                                        
-                                        </div>
-                                        <div>
-                                            <a class="dropdown-item" href="#">Gadgets</a>
-                                            <a class="dropdown-item" href="#">Garden</a>
-                                            <a class="dropdown-item" href="#">Grocery</a>
-                                            <a class="dropdown-item" href="#">Home</a>
-                                            <a class="dropdown-item" href="#">Jewelry</a>
-                                            <a class="dropdown-item" href="#">Kids & Baby</a>
-                                            <a class="dropdown-item" href="#">Mens Fashion</a>
-                                            <a class="dropdown-item" href="#">Mobile</a>                                        
-                                        </div>
-                                        <div>
-                                            <a class="dropdown-item" href="#">Motorcycle</a>
-                                            <a class="dropdown-item" href="#">Movies</a>
-                                            <a class="dropdown-item" href="#">Music</a>
-                                            <a class="dropdown-item" href="#">Office</a>
-                                            <a class="dropdown-item" href="#">Pets</a>
-                                            <a class="dropdown-item" href="#">Romantic</a>
-                                            <a class="dropdown-item" href="#">Sport</a>
-                                            <a class="dropdown-item" href="#">Toys</a>                                        
-                                        </div>  
-                                    </div>                                    
-                                </div>
-                                <div>
-                                    <h6 class="dropdown-header">SALE</h6>
-                                    <a class="dropdown-item" href="#">Accessories</a>
-                                    <a class="dropdown-item" href="#">Alcohol</a>
-                                    <a class="dropdown-item" href="#">Art</a>
-                                    <a class="dropdown-item" href="#">Books</a>
-                                    <a class="dropdown-item" href="#">Drink</a>
-                                    <a class="dropdown-item" href="#">Electronics</a>
-                                    <a class="dropdown-item" href="#">Flowers & Plants</a>
-                                    <a class="dropdown-item" href="#">Food</a>                                    
-                                </div>
-                                <div class="dropdown-container">
-                                    <img class="dropdown-img" src="img/header/drop-down-img.jpg" alt="Drop down menu image">
-                                </div>
-                            </div>                           
-                        </div>
-                    </li>
-                    <li class="navigation__item header__item"><a class="header__link" href="">Company</a></li>
-                    <li class="navigation__item header__item"><a class="header__link" href="">Library</a></li>
-                    <li class="navigation__item header__item"><a class="header__link" href="">Contact us</a></li>
-                </ul>
-            </nav>
-            <div class="menu__settings">
-                <ul class="settings">
-                    <li class="settings__item header__item dropdown-toggle">EN</li>
-                    <li class="settings__item header__item dropdown-toggle">$US</li>
-                </ul>
-            </div>
+            <ul class="navigation">
+                <li class="navigation__item header__toggle dropdown-toggle" >Services</li>
+                <li class="navigation__item"><a class="header__link" href="#">Company</a></li>
+                <li class="navigation__item"><a class="header__link" href="#">Library</a></li>
+                <li class="navigation__item"><a class="header__link" href="#">Contact us</a></li>
+            </ul>
+            <ul class="settings">
+                <li class="settings__item dropdown-toggle">EN</li>
+                <li class="settings__item dropdown-toggle">$US</li>
+            </ul>
             <ul class="operations">
-                <li class="operations__item header__item"><i class="fas fa-search"></i></li>
-                <li class="operations__item header__item" data-toggle="modal" data-target="#sign-in"><i class="far fa-user"></i></li>
-                <li class="operations__item header__item"><i class="far fa-heart"></i></li>
-                <li class="operations__item header__item"><i class="fas fa-shopping-bag"></i></li>
+                <li class="operations__item"><i class="fas fa-search"></i></li>
+                <li class="operations__item" data-toggle="modal" data-target="#sign-in"><i class="far fa-user"></i></li>
+                <li class="operations__item">
+                    <i class="far fa-heart"></i>
+                    <div class="wishlist__container added__container_header">
+                    </div>                    
+                </li>
+                <li class="operations__item">
+                    <a href="./cart.html">
+                        <i class="fas fa-shopping-bag"></i>
+                        <div class="cart__container added__container_header">
+                        </div>                         
+                    </a>
+                </li>
             </ul>                
         </div> 
-    </header>
+      </header>
 
-    <header class="header-mobile  wrapper_inner">
-        <div class="header-mobile__group">
-            <button class="navbar-toggler navbar-light" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="logo">
-                <a class="logo__linc" href="#"><img class="logo__img" src="img/header/osf-logo.png" alt="OSF Logo"></a>                
-                <div class="logo__name">
-                </div>            
-            </div>               
-        </div>   
-    </header>
+      <div class="header__dropdown_desktop wrapper_outer hide">
+          <div>
+              <h6 class="dropdown__header">PRODUCT CATEGORIES</h6>
+              <div class="categories">
+                  <div>
+                      <a class="dropdown__item" href="./not_found.html">Accessories</a>
+                      <a class="dropdown__item" href="./not_found.html">Alcohol</a>
+                      <a class="dropdown__item" href="./not_found.html">Art</a>
+                      <a class="dropdown__item" href="./not_found.html">Books</a>
+                      <a class="dropdown__item" href="./not_found.html">Drink</a>
+                      <a class="dropdown__item" href="./not_found.html">Electronics</a>
+                      <a class="dropdown__item" href="./not_found.html">Flowers & Plants</a>
+                      <a class="dropdown__item" href="./not_found.html">Food</a>                                        
+                  </div>
+                  <div>
+                      <a class="dropdown__item" href="./not_found.html">Gadgets</a>
+                      <a class="dropdown__item" href="./not_found.html">Garden</a>
+                      <a class="dropdown__item" href="./not_found.html">Grocery</a>
+                      <a class="dropdown__item" href="./not_found.html">Home</a>
+                      <a class="dropdown__item" href="./not_found.html">Jewelry</a>
+                      <a class="dropdown__item" href="./not_found.html">Kids & Baby</a>
+                      <a class="dropdown__item" href="./not_found.html">Mens Fashion</a>
+                      <a class="dropdown__item" href="./not_found.html">Mobile</a>                                        
+                  </div>
+                  <div>
+                      <a class="dropdown__item" href="./not_found.html">Motorcycle</a>
+                      <a class="dropdown__item" href="./not_found.html">Movies</a>
+                      <a class="dropdown__item" href="./not_found.html">Music</a>
+                      <a class="dropdown__item" href="./not_found.html">Office</a>
+                      <a class="dropdown__item" href="./not_found.html">Pets</a>
+                      <a class="dropdown__item" href="./not_found.html">Romantic</a>
+                      <a class="dropdown__item" href="./not_found.html">Sport</a>
+                      <a class="dropdown__item" href="./not_found.html">Toys</a>                                        
+                  </div>  
+              </div>                                    
+          </div>
+          <div>
+              <h6 class="dropdown__header">SALE</h6>
+              <a class="dropdown__item" href="./not_found.html">Accessories</a>
+              <a class="dropdown__item" href="./not_found.html">Alcohol</a>
+              <a class="dropdown__item" href="./not_found.html">Art</a>
+              <a class="dropdown__item" href="./not_found.html">Books</a>
+              <a class="dropdown__item" href="./not_found.html">Drink</a>
+              <a class="dropdown__item" href="./not_found.html">Electronics</a>
+              <a class="dropdown__item" href="./not_found.html">Flowers & Plants</a>
+              <a class="dropdown__item" href="./not_found.html">Food</a>                                    
+          </div>
+          <div class="dropdown__container">
+              <img class="dropdown__img" src="img/header/drop-down-img.jpg" alt="Drop down menu image">
+          </div>                       
+      </div>
 
-    <div class="collapse wrapper_inner" id="navbarToggleExternalContent">
-        <ul class="navigation">
-            <li class="header__item" >
-                <a class="header__link" data-toggle="collapse" href="#header__services-group"><span>Services</span> <i class="fas fa-caret-down"></i></a>
-                <div id="header__services-group" class="header__collapsed collapse">
-                    <a class="dropdown-header" data-toggle="collapse" href="#header__categories"><span>Categories</span><i class="fas fa-caret-down"></i></a>
-                    <div class="header__collapsed collapse" id="header__categories">
-                        <div class="categories__column">
-                            <a class="categories__item" href="#">Alcohol</a>
-                            <a class="categories__item" href="#">Art</a>
-                            <a class="categories__item" href="#">Books</a>
-                            <a class="categories__item" href="#">Drink</a>
-                            <a class="categories__item" href="#">Electronics</a>
-                            <a class="categories__item" href="#">Home</a>
-                            <a class="categories__item" href="#">Jewelry</a>
-                            <a class="categories__item" href="#">Kids & Baby</a>
-                            <a class="categories__item" href="#">Men's Fashion</a>
-                            <a class="categories__item" href="#">Mobile</a>
-                            <a class="categories__item" href="#">Motorcycles</a>
-                            <a class="categories__item" href="#">Movies</a>
-                            <a class="categories__item" href="#">Music</a>
-                            <a class="categories__item" href="#">Sport</a>
-                            <a class="categories__item" href="#">Toys</a>
-                            <a class="categories__item" href="#">Travel</a>
-                            <a class="categories__item" href="#">Women's Fashion</a>
-                        </div>
-                    </div>
-                    <div class="header__sale">
-                        <a class="dropdown-header" data-toggle="collapse" href="#header__about"><span>Sale</span><i class="fas fa-caret-down"></i></a>
-                        <div class="categories__column header__collapsed collapse" id="header__about">
-                            <a class="categories__item" href="#">Accessories</a>
-                            <a class="categories__item" href="#">Alcohol</a>
-                            <a class="categories__item" href="#">Art</a>
-                            <a class="categories__item" href="#">Books</a>
-                            <a class="categories__item" href="#">Drink</a>
-                            <a class="categories__item" href="#">Electronics</a>
-                            <a class="categories__item" href="#">Flowers & Plants</a>
-                            <a class="categories__item" href="#">Food</a>
-                        </div>                 
-                    </div>
-                </div>                                        
-            </li>
-            <li class="header__item"><span><a class="header__link" href="">Company</a></span></li>
-            <li class="header__item"><span><a class="header__link" href="">Library</a></span></li>
-            <li class="header__item"><span><a class="header__link" href="">Contact us</a></span></li>
-        </ul>
-        <div class="dropdown-container">
-            <img class="dropdown-img" src="img/header/drop-down-img.jpg" alt="Drop down menu image">
-        </div>
-    </div>
+      <header class="header-mobile  wrapper_inner">
+          <div class="header-mobile__group">
+              <i class="menu__icon fas fa-bars"></i>
+              <div class="logo">
+                  <a class="logo__linc" href="./index.html"><img class="logo__img" src="img/header/osf-logo.png" alt="OSF Logo"></a>                
+                  <div class="logo__name">
+                  </div>            
+              </div>               
+          </div>   
+      </header>
+
+      <div class="header__dropdown_mobile wrapper_inner hide" id="mobile_dropdown">
+          <ul class="navigation">
+              <li class="header__item" >
+                  <a class="header__link" data-toggle="collapse" href="#header__services-group"><span>Services</span> <i class="fas fa-caret-down"></i></a>
+                  <div id="header__services-group" class="header__collapsed collapse">
+                      <a class="dropdown-header" data-toggle="collapse" href="#header__categories"><span>Categories</span><i class="fas fa-caret-down"></i></a>
+                      <div class="header__collapsed collapse" id="header__categories">
+                          <div class="categories__column">
+                              <a class="categories__item" href="./not_found.html">Alcohol</a>
+                              <a class="categories__item" href="./not_found.html">Art</a>
+                              <a class="categories__item" href="./not_found.html">Books</a>
+                              <a class="categories__item" href="./not_found.html">Drink</a>
+                              <a class="categories__item" href="./not_found.html">Electronics</a>
+                              <a class="categories__item" href="./not_found.html">Home</a>
+                              <a class="categories__item" href="./not_found.html">Jewelry</a>
+                              <a class="categories__item" href="./not_found.html">Kids & Baby</a>
+                              <a class="categories__item" href="./not_found.html">Men's Fashion</a>
+                              <a class="categories__item" href="./not_found.html">Mobile</a>
+                              <a class="categories__item" href="./not_found.html">Motorcycles</a>
+                              <a class="categories__item" href="./not_found.html">Movies</a>
+                              <a class="categories__item" href="./not_found.html">Music</a>
+                              <a class="categories__item" href="./not_found.html">Sport</a>
+                              <a class="categories__item" href="./not_found.html">Toys</a>
+                              <a class="categories__item" href="./not_found.html">Travel</a>
+                              <a class="categories__item" href="./not_found.html">Women's Fashion</a>
+                          </div>
+                      </div>
+                      <div class="header__sale">
+                          <a class="dropdown-header" data-toggle="collapse" href="#header__about"><span>Sale</span><i class="fas fa-caret-down"></i></a>
+                          <div class="categories__column header__collapsed collapse" id="header__about">
+                              <a class="categories__item" href="./not_found.html">Accessories</a>
+                              <a class="categories__item" href="./not_found.html">Alcohol</a>
+                              <a class="categories__item" href="./not_found.html">Art</a>
+                              <a class="categories__item" href="./not_found.html">Books</a>
+                              <a class="categories__item" href="./not_found.html">Drink</a>
+                              <a class="categories__item" href="./not_found.html">Electronics</a>
+                              <a class="categories__item" href="./not_found.html">Flowers & Plants</a>
+                              <a class="categories__item" href="./not_found.html">Food</a>
+                          </div>                 
+                      </div>
+                  </div>                                        
+              </li>
+              <li class="header__item"><span><a class="header__link" href="">Company</a></span></li>
+              <li class="header__item"><span><a class="header__link" href="">Library</a></span></li>
+              <li class="header__item"><span><a class="header__link" href="">Contact us</a></span></li>
+          </ul>
+          <div class="dropdown-container">
+              <img class="dropdown-img" src="img/header/drop-down-img.jpg" alt="Drop down menu image">
+          </div>
+      </div>
 
       <main class="main wrapper_inner">
         <nav aria-label="breadcrumb">
           <ol class="breadcrumb">
-            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="./index.html">Home</a></li>
             <li class="breadcrumb-item active" aria-current="page">404</li>
           </ol>
         </nav>
@@ -213,23 +215,22 @@
       <footer class="footer wrapper_inner ">
         <div class="footer__info">
             <div class="footer__copyright">
-                <p>© Copyright 2021.<br>All Rights Reserved.</p>
+                <p>© Copyright <span class="current-year"></span>.<br>All Rights Reserved.</p>
             </div>
             <div>
-                <div class="footer__header-desktop">
-                    <h3 class="footer__header">Contact</h3>
+                <address class="footer__header-desktop">
+                    <p class="footer__header">Contact</p>
                     <p>Headquarters:<br> 5600, Blvd. des Galeries, Bur 530<br>Québec G2K 2H6</p>
-                    <p>contact@osf-global.com</p>
-                    <p>+1 (888) 548-4344</p>                        
-                </div>
+                    <p><a class="mail-to" href="mailto:contact@osf-global.com">contact@osf-global.com</a></p>
+                    <p><a class="call-to" href="tel:+1(888)548-4344">+1 (888) 548-4344</a></p>             
+                </address>
                 <div class="footer__header-mobile">
                     <a class="footer__header" data-toggle="collapse" href="#footer__adress">Contact &nbsp; <i class="fas fa-caret-down"></i></a>
                     <div class="footer__collapsed collapse" id="footer__adress">
                         <p>Headquarters:<br> 5600, Blvd. des Galeries, Bur 530<br>Québec G2K 2H6</p>
-                        <p>contact@osf-global.com</p>
-                        <p>+1 (888) 548-4344</p>                            
-                    </div>
-                    
+                        <p><a class="mail-to" href="mailto:contact@osf-global.com">contact@osf-global.com</a></p>
+                        <p><a class="call-to" href="tel:+1(888)548-4344">+1 (888) 548-4344</a></p>                          
+                    </div>                        
                 </div>
             </div>
         </div>
@@ -238,37 +239,37 @@
                 <h3 class="footer__header">Categories</h3>
                 <div class="footer__categories">
                     <div class="categories__column">
-                        <a class="categories__item" href="#">Alcohol</a>
-                        <a class="categories__item" href="#">Art</a>
-                        <a class="categories__item" href="#">Books</a>
-                        <a class="categories__item" href="#">Drink</a>
-                        <a class="categories__item" href="#">Electronics</a>
+                        <a class="categories__item" href="./not_found.html">Alcohol</a>
+                        <a class="categories__item" href="./not_found.html">Art</a>
+                        <a class="categories__item" href="./not_found.html">Books</a>
+                        <a class="categories__item" href="./not_found.html">Drink</a>
+                        <a class="categories__item" href="./not_found.html">Electronics</a>
                     </div>
                     <div class="categories__column">
-                        <a class="categories__item" href="#">Home</a>
-                        <a class="categories__item" href="#">Jewelry</a>
-                        <a class="categories__item" href="#">Kids & Baby</a>
-                        <a class="categories__item" href="#">Men's Fashion</a>
-                        <a class="categories__item" href="#">Mobile</a>
-                        <a class="categories__item" href="#">Motorcycles</a>
-                        <a class="categories__item" href="#">Movies</a>
-                        <a class="categories__item" href="#">Music</a>
+                        <a class="categories__item" href="./not_found.html">Home</a>
+                        <a class="categories__item" href="./not_found.html">Jewelry</a>
+                        <a class="categories__item" href="./not_found.html">Kids & Baby</a>
+                        <a class="categories__item" href="./not_found.html">Men's Fashion</a>
+                        <a class="categories__item" href="./not_found.html">Mobile</a>
+                        <a class="categories__item" href="./not_found.html">Motorcycles</a>
+                        <a class="categories__item" href="./not_found.html">Movies</a>
+                        <a class="categories__item" href="./not_found.html">Music</a>
                     </div>
                     <div class="categories__column">
-                        <a class="categories__item" href="#">Sport</a>
-                        <a class="categories__item" href="#">Toys</a>
-                        <a class="categories__item" href="#">Travel</a>
-                        <a class="categories__item" href="#">Women's Fashion</a>
+                        <a class="categories__item" href="./not_found.html">Sport</a>
+                        <a class="categories__item" href="./not_found.html">Toys</a>
+                        <a class="categories__item" href="./not_found.html">Travel</a>
+                        <a class="categories__item" href="./not_found.html">Women's Fashion</a>
                     </div>
                 </div>
             </div>
             <div class="footer__about">
                 <h3 class="footer__header">About</h3>
                 <div class="categories__column">
-                    <a class="categories__item" href="#">About us</a>
-                    <a class="categories__item" href="#">Delivery</a>
-                    <a class="categories__item" href="#">Testimonials</a>
-                    <a class="categories__item" href="#">Contact</a>
+                    <a class="categories__item" href="./not_found.html">About us</a>
+                    <a class="categories__item" href="./not_found.html">Delivery</a>
+                    <a class="categories__item" href="./not_found.html">Testimonials</a>
+                    <a class="categories__item" href="./not_found.html">Contact</a>
                 </div>                 
             </div>
         </div>
@@ -277,84 +278,99 @@
                 <a class="footer__header" data-toggle="collapse" href="#footer__categories"><span>Categories</span><i class="fas fa-caret-down"></i></a>
                 <div class="footer__categories footer__collapsed collapse" id="footer__categories">
                     <div class="categories__column">
-                        <a class="categories__item" href="#">Alcohol</a>
-                        <a class="categories__item" href="#">Art</a>
-                        <a class="categories__item" href="#">Books</a>
-                        <a class="categories__item" href="#">Drink</a>
-                        <a class="categories__item" href="#">Electronics</a>
-                        <a class="categories__item" href="#">Home</a>
-                        <a class="categories__item" href="#">Jewelry</a>
-                        <a class="categories__item" href="#">Kids & Baby</a>
-                        <a class="categories__item" href="#">Men's Fashion</a>
-                        <a class="categories__item" href="#">Mobile</a>
-                        <a class="categories__item" href="#">Motorcycles</a>
-                        <a class="categories__item" href="#">Movies</a>
-                        <a class="categories__item" href="#">Music</a>
-                        <a class="categories__item" href="#">Sport</a>
-                        <a class="categories__item" href="#">Toys</a>
-                        <a class="categories__item" href="#">Travel</a>
-                        <a class="categories__item" href="#">Women's Fashion</a>
+                        <a class="categories__item" href="./not_found.html">Alcohol</a>
+                        <a class="categories__item" href="./not_found.html">Art</a>
+                        <a class="categories__item" href="./not_found.html">Books</a>
+                        <a class="categories__item" href="./not_found.html">Drink</a>
+                        <a class="categories__item" href="./not_found.html">Electronics</a>
+                        <a class="categories__item" href="./not_found.html">Home</a>
+                        <a class="categories__item" href="./not_found.html">Jewelry</a>
+                        <a class="categories__item" href="./not_found.html">Kids & Baby</a>
+                        <a class="categories__item" href="./not_found.html">Men's Fashion</a>
+                        <a class="categories__item" href="./not_found.html">Mobile</a>
+                        <a class="categories__item" href="./not_found.html">Motorcycles</a>
+                        <a class="categories__item" href="./not_found.html">Movies</a>
+                        <a class="categories__item" href="./not_found.html">Music</a>
+                        <a class="categories__item" href="./not_found.html">Sport</a>
+                        <a class="categories__item" href="./not_found.html">Toys</a>
+                        <a class="categories__item" href="./not_found.html">Travel</a>
+                        <a class="categories__item" href="./not_found.html">Women's Fashion</a>
                     </div>
                 </div>
             </div>
             <div class="footer__about">
                 <a class="footer__header" data-toggle="collapse" href="#footer__about"><span>About</span><i class="fas fa-caret-down"></i></a>
                 <div class="categories__column footer__collapsed collapse" id="footer__about">
-                    <a class="categories__item" href="#">About us</a>
-                    <a class="categories__item" href="#">Delivery</a>
-                    <a class="categories__item" href="#">Testimonials</a>
-                    <a class="categories__item" href="#">Contact</a>
+                    <a class="categories__item" href="./not_found.html">About us</a>
+                    <a class="categories__item" href="./not_found.html">Delivery</a>
+                    <a class="categories__item" href="./not_found.html">Testimonials</a>
+                    <a class="categories__item" href="./not_found.html">Contact</a>
                 </div>                 
             </div>
         </div>    
         <div class="footer__social">
-            <a class="footer__icon"><i class="fab fa-facebook-f"></i></a>
-            <a class="footer__icon"><i class="fab fa-google-plus-g"></i></a>
-            <a class="footer__icon"><i class="fab fa-twitter"></i></a>
-            <a class="footer__icon"><i class="fab fa-pinterest-p"></i></a>
-
+            <a class="footer__icon" href="https://www.facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+            <a class="footer__icon" href="https://plus.google.com" target="_blank"><i class="fab fa-google-plus-g"></i></a>
+            <a class="footer__icon" href="https://twitter.com" target="_blank"><i class="fab fa-twitter"></i></a>
+            <a class="footer__icon" href="https://www.pinterest.com/" target="_blank"><i class="fab fa-pinterest-p"></i></a>
         </div>
         <ul class="operations_mobile">
             <li class="operations__item"><i class="fas fa-search"></i></li>
             <li class="operations__item" data-toggle="modal" data-target="#sign-in"><i class="far fa-user"></i></li>
-            <li class="operations__item"><i class="far fa-heart"></i></li>
-            <li class="operations__item"><i class="fas fa-shopping-bag"></i></li>
+            <li class="operations__item">
+                <i class="far fa-heart"></i>
+                <div class="added__container_footer wishlist__container">
+                </div> 
+            </li>
+            <li class="operations__item">
+                <i class="fas fa-shopping-bag"></i>
+                <div class="cart__container added__container_footer">
+                </div> 
+            </li>
         </ul>  
-      </footer>
+    </footer>
 
-      <!-- Modal -->
-      <div
-        class="modal fade"
-        id="sign-in"
-        tabindex="-1"
-        role="dialog"
-        aria-hidden="true"
-      >
+    <!-- Modal -->
+    <div class="modal fade" id="sign-in" >
         <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content signin__content">
+        <div class="modal-content signin__content">
             <h2 class="signin__heading">Sign in</h2>
             <div class="form-group">
-              <label for="exampleInputEmail1">Email</label>
-              <input
-                type="email"
-                class="form-control signin__control"
-                id="exampleInputEmail1"
-              />
+                <label for="email">Email</label>
+                <input type="email" id="email" required  class="form-control signin__control">
             </div>
             <div class="form-group">
-              <div class="password-group">
-                <label for="exampleInputPassword1">Lato</label>
-                <span class="signin__notification">forgot password</span>
-              </div>
-
-              <input
-                type="password"
-                class="form-control signin__control"
-                id="exampleInputPassword1"
-              />
+            <div class ="password-group">
+                <label for="password">Lato</label>
+                <span class="signin__notification" >forgot password</span>                          
             </div>
-            <button type="submit" class="btn btn__main">login</button>
-            <span class="signin__notification">I don’t have an account</span>
+            <div class ="password__field">
+                <input type="password" id="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*_=+-]).{6,}" class="form-control signin__control password__input">
+                <i class="fas fa-eye-slash password__icon"></i>                    
+            </div>
+            </div>
+            <button type="submit" class="btn btn__main">login</button>  
+            <span class="signin__notification">I don’t have an account</span> 
+        </div>
+        </div>
+    </div>
+
+    <!-- Cookies modal -->
+    <div class="modal fade bd-example-modal-xl" id="cookies__modal" >
+        <div class="modal-dialog modal-xl">
+          <div class="modal-content">
+              <div class="cookies__modal">
+                <div class="cookies__column_left">
+                    <h5 class="cookies__heading">This website uses cookies</h5>
+                    <p>OSF uses its own and third-party cookies for statistical purposes, to know your preferences, for website performance 
+                        and interaction with social media offering publicity tailored to your interests. If you continue browsing, we consider that you accept its use. 
+                        You can expand this information consulting our <a class="link" href="">Cookies Policy Page</a>.</p>
+                </div>
+                <div class="cookies__column_right">
+                    <span data-dismiss="modal"><i class="fas fa-times"></i></span>
+                    <button id="cookies__accept" type="button" class="btn btn-primary btn__main">ACCEPT</button>                      
+                </div>                      
+              </div>
           </div>
         </div>
       </div>

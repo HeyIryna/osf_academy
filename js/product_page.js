@@ -132,7 +132,7 @@ function fillProductFromCard(element) {
   let product = {
     name: card.find('.card__title').text(),
     img: card.find('.card__img').attr('src'),
-    price: card.find('.price').text(),
+    price: card.find('.price').text().replace( /^\D+/g, ''),
     number: 1,
   };
   return product;
@@ -145,6 +145,17 @@ function fillListIcon(storageName, className) {
   }, 0);
   $(className).css('display', 'flex').html(cartAmount);
 }
+
+// "Change amount button" increases or decreases number of products user wants to buy
+$('.amount__button.plus').on('click', function () {
+  $('.amount__number').val(+$('.amount__number').val() + 1);
+});
+
+$('.amount__button.minus').on('click', function () {
+  if (+$('.amount__number').val() > 1) {
+    $('.amount__number').val(+$('.amount__number').val() - 1);
+  }
+});
 
 // "Add to cart button" increase the number for cart element
 $('.btn__add').on('click', addToCartDifferentAmount);
@@ -170,7 +181,7 @@ function fillProductFromProductPage() {
   let product = {
     name: $('.product__title').text().trim(),
     img: $('.img__main').attr('src'),
-    price: $('.product__price').text(),
+    price: $('.product__price').text().replace( /^\D+/g, ''),
     number: +$('.amount__number').val().trim(),
   };
   return product;
@@ -208,3 +219,37 @@ $('.img__expand').on('click', function () {
     }
   });
 });
+
+
+// hides mobile and desktop dropped menus on window resize
+$(window).resize(function () {
+  if ($(window).width() <= 769) {
+    if ($('.header__dropdown_desktop').hasClass('show')) {
+      $('.header__dropdown_desktop').toggleClass('show hide');
+    }
+  } else {
+    if ($('.header__dropdown_mobile').hasClass('show')) {
+      $('.header__dropdown_mobile').toggleClass('show hide');
+    }
+  }
+});
+
+// show / hide desktop header dropdown menu on click
+$('.header__toggle').on('click', function () {
+  $('.header__dropdown_desktop').toggleClass('show hide');
+  $(this).toggleClass('active');
+});
+
+// show / hide mobile header dropdown menu on click
+$('.menu__icon').on('click', function () {
+  $('.menu__icon').toggleClass('fa-bars fa-times');
+  $('.header__dropdown_mobile').toggleClass('show hide');
+});
+
+// Toggles up-/down-arrows on header and footer menu when sub-menus are opened /closed
+$('[data-toggle="collapse"]').on('click', function (event) {
+  $(this).find('i').toggleClass('fa-caret-down fa-caret-up');
+});
+
+// Adds current year to footer
+$('.current-year').text(new Date().getFullYear());

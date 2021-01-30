@@ -460,6 +460,9 @@ body {
 .menu .operations__item:visited {
   color: #b2b2b2;
 }
+.menu .operations__item a {
+  color: #b2b2b2;
+}
 
 .dropdown__header {
   color: white;

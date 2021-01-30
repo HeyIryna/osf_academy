@@ -149,6 +149,10 @@
       @extend .header__item;
       @include icon(1.4rem);
       position: relative;
+
+      a {
+        color: $icon-color;
+      }
     }
   }
 }
