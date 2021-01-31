@@ -157,6 +157,15 @@
   }
 }
 
+.navigation__link {
+  @include link;
+  width: 372px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: $text-secondary;
+
+}
+
 .dropdown {
   &__header {
     @include menu_heading(white, 1rem);

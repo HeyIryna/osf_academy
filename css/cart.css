@@ -464,6 +464,22 @@ body {
   color: #b2b2b2;
 }
 
+.navigation__link {
+  text-decoration: none;
+  color: #45413e;
+  width: 372px;
+  font-weight: 600;
+  font-size: 1rem;
+  color: #999999;
+}
+.navigation__link:visited {
+  color: inherit;
+}
+.navigation__link:hover {
+  color: inherit;
+  cursor: pointer;
+}
+
 .dropdown__header {
   color: white;
   opacity: 0.95;
