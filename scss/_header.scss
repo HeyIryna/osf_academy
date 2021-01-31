@@ -157,7 +157,7 @@
   }
 }
 
-a.nav__link {
+.navigation__item a.nav__link {
   @include link;
   width: 372px;
   font-weight: 600;

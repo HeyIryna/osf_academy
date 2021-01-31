@@ -464,7 +464,7 @@ body {
   color: #b2b2b2;
 }
 
-a.nav__link {
+.navigation__item a.nav__link {
   text-decoration: none;
   color: #45413e;
   width: 372px;
@@ -472,10 +472,10 @@ a.nav__link {
   font-size: 1rem;
   color: #262a32;
 }
-a.nav__link:visited {
+.navigation__item a.nav__link:visited {
   color: inherit;
 }
-a.nav__link:hover {
+.navigation__item a.nav__link:hover {
   color: inherit;
   cursor: pointer;
 }
