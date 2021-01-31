@@ -31,8 +31,6 @@
   }
 }
 
-
-
 .slide {
   background-repeat: no-repeat;
   background-size: cover;
@@ -50,7 +48,7 @@
     background: url('../img/main/carousel-img-1.jpg') rgba(0, 0, 0, 0.3);
     background-blend-mode: multiply;
     filter: contrast(150%);
-    align-items: flex-start;    
+    align-items: flex-start;
   }
 
   &__2 {
@@ -58,7 +56,8 @@
     background-image: url('../img/main/carousel-img-2.jpg');
     align-items: center;
 
-    .slide__heading, .slide__text {
+    .slide__heading,
+    .slide__text {
       text-align: center;
     }
   }
@@ -67,7 +66,8 @@
     background-image: url('../img/main/carousel-img-3.jpg');
     align-items: flex-end;
 
-    .slide__heading, .slide__text {
+    .slide__heading,
+    .slide__text {
       text-align: end;
     }
   }
@@ -137,44 +137,7 @@
   }
 }
 
-
-
 @media (max-width: 1279px) {
-  .about {
-    &__aside {
-      width: 25%;
-    }
-
-    .slick-dots {
-      bottom: 5px;
-  }
-  }
-
-  .sale {
-    width: 100%;
-
-    &__percents {
-      font-size: 4rem;
-    }
-  }
-
-  .about__carousell {
-    width: 75%;
-  }
-
-  .slide {
-    padding: 10%;
-    background-position: right top;
-
-    &__heading {
-      font-size: 2.5rem;
-    }
-  }
-
-
-}
-
-@media (max-width: 769px) {
   .about {
     &__aside {
       display: none;
@@ -186,6 +149,23 @@
   }
 
   .slide {
+    &__heading {
+      font-size: 2rem;
+      margin-bottom: 50px;
+    }
+
+    &__text {
+      width: 100%;
+      height: auto;
+      font-size: 1.2rem;
+      line-height: 1.5rem;
+      margin-bottom: 80px;
+    }
+  }
+}
+
+@media (max-width: 769px) {
+  .slide {
     padding: 15px;
 
     &__heading {
@@ -196,7 +176,7 @@
     &__text {
       width: 100%;
       height: auto;
-      font-size: 1.2rem;
+      font-size: 1rem;
       line-height: 1.5rem;
       margin-bottom: 20px;
     }

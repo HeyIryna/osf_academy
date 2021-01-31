@@ -540,7 +540,7 @@ body {
   display: none;
 }
 
-@media (max-width: 769px) {
+@media (max-width: 1279px) {
   .header-desktop {
     display: none;
   }
@@ -855,6 +855,11 @@ body {
     top: 0;
     right: 5px;
     right: -7px;
+  }
+
+  .cart__container,
+.wishlist__container {
+    display: none;
   }
 }
 .signin__content {

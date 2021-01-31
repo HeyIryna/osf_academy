@@ -80,6 +80,7 @@
   }
 }
 
+
 @media (max-width: 1279px) {
   .footer {
     grid-template-columns: 27% 1fr 5%;
@@ -181,4 +182,10 @@
     @include added__container($background-main);
     right: -7px;
   }
+
+  .cart__container,
+  .wishlist__container {
+    display: none;
+  }
+  
 }

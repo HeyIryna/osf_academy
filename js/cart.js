@@ -92,6 +92,12 @@ $('.form-check :radio').change(function () {
   calculateAll();
 });
 
+
+// clears sessionStorage on checkout
+$('.btn__checkout').on('click', function() {
+  sessionStorage.removeItem('cart');  
+})
+
 // hides mobile and desktop dropped menus on window resize
 $(window).resize(function () {
   if ($(window).width() <= 769) {
